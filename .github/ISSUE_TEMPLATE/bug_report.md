@@ -15,8 +15,8 @@ Clone repository https://github.com/primefaces/primefaces-test.git in order to r
 
 **Environment:**
  - PF Version: _8.0_
- - JSF + version: _Mojarra or MyFaces_
- - Affected browsers: _Chrome, iOS, ALL_
+ - JSF + version: _e.g. Mojarra 2.2.8 or MyFaces 2.3.6_
+ - Affected browsers: _e.g. Chrome, iOS, ALL_
 
 **To Reproduce**
 Steps to reproduce the behavior:
