@@ -15,27 +15,6 @@ This is an overview page, please visit [primefaces-extensions.github.io](http://
 
 [![PrimeFaces Extensions Logo](http://primefaces-extensions.github.io/reports/images/title.png)](https://www.primefaces.org/showcase-ext/)
 
-##### Maven
-
-```xml
-<dependency>
-    <groupId>org.primefaces.extensions</groupId>
-    <artifactId>primefaces-extensions</artifactId>
-    <version>8.0.4</version>
-</dependency>
-<dependency>
-    <groupId>org.primefaces.extensions</groupId>
-    <artifactId>resources-ckeditor</artifactId>
-    <version>8.0.4</version>
-</dependency>
-```
- ##### Namespaces
- 
- The PrimeFaces Extensions namespace is necessary to add PrimeFaces Extensions components to your pages.
- 
- ```xml
- xmlns:pe="http://primefaces.org/ui/extensions"
- ```
 
 ### Getting Started
 ***
@@ -48,7 +27,7 @@ Please refer to the [showcase](https://www.primefaces.org/showcase-ext/) in orde
 
 ### Issues
 ***
-Please report all issues [here](https://github.com/primefaces-extensions/primefaces-extensions.github.com/issues).
+Please report all issues [here](https://github.com/primefaces-extensions/primefaces-extensions/issues).
 
 ### License
 ***
