@@ -20,11 +20,6 @@ This is an overview page, please visit [primefaces-extensions.github.io](http://
 ***
 Please refer to the [Getting Started Guide](https://github.com/primefaces-extensions/primefaces-extensions.github.com/wiki/Getting-Started) to see what you need to get started and any optional libraries.
 
-
-### Demo
-***
-Please refer to the [showcase](https://www.primefaces.org/showcase-ext/) in order to see the full usage of the components. Sources of PrimeFaces Extensions showcase are available as a separate [project]( https://github.com/primefaces-extensions/showcase).
-
 ### Issues
 ***
 Please report all issues [here](https://github.com/primefaces-extensions/primefaces-extensions/issues).
