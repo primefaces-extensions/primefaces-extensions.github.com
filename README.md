@@ -23,6 +23,6 @@ Please report all issues [here](https://github.com/primefaces-extensions/primefa
 
 ### License
 ***
-Licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) license.
+Licensed under the [MIT](https://en.wikipedia.org/wiki/MIT_License) license.
 
-`SPDX-License-Identifier: Apache-2.0`
+`SPDX-License-Identifier: MIT`
