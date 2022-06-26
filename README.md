@@ -17,6 +17,10 @@ This is an overview page, please visit [primefaces-extensions.github.io](http://
 ***
 Please refer to the [Getting Started Guide](https://github.com/primefaces-extensions/primefaces-extensions.github.com/wiki/Getting-Started) to see what you need to get started and any optional libraries.
 
+### Showcase
+***
+A showcase of component usage can be found [here](https://www.primefaces.org/showcase-ext/views/home.jsf)
+
 ### Issues
 ***
 Please report all issues [here](https://github.com/primefaces-extensions/primefaces-extensions/issues).
