@@ -21,6 +21,11 @@ Please refer to the [Getting Started Guide](https://github.com/primefaces-extens
 ***
 A showcase of component usage can be found [here](https://www.primefaces.org/showcase-ext/views/home.jsf)
 
+### VDL Tag Libary Docs
+***
+Please refer to the [VDL Docs](http://primefaces-extensions.github.io/vdldoc/) to examine the latest tag library details.
+
+
 ### Issues
 ***
 Please report all issues [here](https://github.com/primefaces-extensions/primefaces-extensions/issues).

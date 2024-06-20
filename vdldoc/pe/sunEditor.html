@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>sunEditor (PrimeFaces Extensions VDL Documentation)
+			</title>
+        <meta name="keywords" content="$title">
+        <link rel="stylesheet" type="text/css" title="Style" href="../stylesheet.css">
+    </head>
+    <body>
+        <noscript>
+            <div>JavaScript is disabled on your browser.</div>
+        </noscript>
+        <div class="topNav">
+            <a name="navbar_top"></a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow"></a>
+            <ul class="navList" title="Navigation">
+                <li>
+                    <a href="../overview-summary.html">Overview</a>
+                </li>
+                <li>
+                    <a href="tld-summary.html">Library</a>
+                </li>
+                <li class="navBarCell1Rev">Tag</li>
+                <li>
+                    <a href="../help-doc.html">Help</a>
+                </li>
+            </ul>
+        </div>
+        <div class="subNav">
+            <ul class="navList">
+                <li>
+                    <a target="_top" href="../index.html?pe/sunEditor.html">
+									Frames
+								</a>
+                </li>
+                <li>
+                    <a target="_top" href="sunEditor.html">
+									No Frames
+								</a>
+                </li>
+            </ul>
+            <ul class="navList" id="alltags_navbar_top">
+                <li>
+                    <a href="../alltags-noframe.html">All Tags</a>
+                </li>
+            </ul>
+            <div>
+                <script type="text/javascript">
+								document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
+							</script>
+            </div>
+            <a name="skip-navbar_top"></a>
+        </div>
+        <div class="header">
+            <h1 title="Library" class="title">pe</h1>
+            <h2 class="title">
+							Tag
+							sunEditor</h2>
+        </div>
+        <div class="contentContainer">
+            <div class="description">
+                <ul class="blockList">
+                    <li class="blockList">
+                        <dl>
+                            <dt>Description:</dt>
+                            <dd>
+                                <div class="block">
+            SunEditor component, wysiwyg html editor in js.
+            Client behavior events:
+            change - on change (javax.faces.event.AjaxBehaviorEvent),
+            scroll - on scroll (javax.faces.event.AjaxBehaviorEvent),
+            mousedown - on mouseDown (javax.faces.event.AjaxBehaviorEvent),
+            click - on click (javax.faces.event.AjaxBehaviorEvent),
+            input - on input (javax.faces.event.AjaxBehaviorEvent),
+            keydown - on keyDown (javax.faces.event.AjaxBehaviorEvent),
+            keyup - on keyUp (javax.faces.event.AjaxBehaviorEvent),
+            focus - on focus (javax.faces.event.AjaxBehaviorEvent),
+            blur - on blur (javax.faces.event.AjaxBehaviorEvent),
+            paste - on paste (javax.faces.event.AjaxBehaviorEvent),
+            copy - on copy (javax.faces.event.AjaxBehaviorEvent),
+            cut - on cut (javax.faces.event.AjaxBehaviorEvent),
+            drop - on drop (javax.faces.event.AjaxBehaviorEvent),
+            save - on save (javax.faces.event.AjaxBehaviorEvent).
+            initialize - when editor is initialized (javax.faces.event.AjaxBehaviorEvent).</div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="summary">
+                <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Component summary table, listing component information">
+                    <caption>
+                        <span>Component Information</span><span class="tabEnd">&nbsp;</span>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th class="colFirst" scope="col">Info</th><th class="colLast" scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rowColor">
+                            <td class="colFirst">Component Type</td><td class="colLast"><code>org.primefaces.extensions.component.SunEditor</code></td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst">Handler Class</td><td class="colLast"><i>None</i></td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colFirst">Renderer Type</td><td class="colLast"><code>org.primefaces.extensions.component.SunEditorRenderer</code></td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst">Description</td><td class="colLast"><i>None</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="summary">
+                <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Attribute summary table, listing attribute information">
+                    <caption>
+                        <span>Attributes</span><span class="tabEnd">&nbsp;</span>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th class="colFirst">Name</th><th class="colOne">Required</th><th class="colOne">Type</th><th class="colLast">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="id" class="rowColor">
+                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Unique identifier of the component in a naming container.</td>
+                        </tr>
+                        <tr id="rendered" class="altColor">
+                            <td class="colFirst"><a href="#rendered"><code>rendered</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Boolean value to specify the rendering of the component, when set to false component will not be rendered.</td>
+                        </tr>
+                        <tr id="binding" class="rowColor">
+                            <td class="colFirst"><a href="#binding"><code>binding</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>javax.faces.component.UIComponent</code>)
+					</td><td class="colLast">
+                An EL expression referring to a server side UIComponent instance in a backing bean.</td>
+                        </tr>
+                        <tr id="widgetVar" class="altColor">
+                            <td class="colFirst"><a href="#widgetVar"><code>widgetVar</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Name of the client side widget.</td>
+                        </tr>
+                        <tr id="value" class="rowColor">
+                            <td class="colFirst"><a href="#value"><code>value</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Object</code>)
+					</td><td class="colLast">
+                Value of the component.</td>
+                        </tr>
+                        <tr id="height" class="altColor">
+                            <td class="colFirst"><a href="#height"><code>height</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Height of the editor with CSS units, set as an inline style. For example <code>500px</code> or <code>100%/code>. Default value: auto</td>
+                        </tr>
+                        <tr id="width" class="rowColor">
+                            <td class="colFirst"><a href="#width"><code>width</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Width of the editor with CSS units, set as an inline style. For example <code>500px</code> or <code>100%/code>. Default value: 100%.</td>
+                        </tr>
+                        <tr id="readonly" class="altColor">
+                            <td class="colFirst"><a href="#readonly"><code>readonly</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Defines if the editor is readonly.</td>
+                        </tr>
+                        <tr id="disabled" class="rowColor">
+                            <td class="colFirst"><a href="#disabled"><code>disabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Defines if the editor is disabled.</td>
+                        </tr>
+                        <tr id="tabindex" class="altColor">
+                            <td class="colFirst"><a href="#tabindex"><code>tabindex</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                The tab index to assign to the editor. If not given, no tab index will be assigned.</td>
+                        </tr>
+                        <tr id="required" class="rowColor">
+                            <td class="colFirst"><a href="#required"><code>required</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Marks component as required.</td>
+                        </tr>
+                        <tr id="escape" class="altColor">
+                            <td class="colFirst"><a href="#escape"><code>escape</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Defines if the content of the component should be escaped or not.</td>
+                        </tr>
+                        <tr id="secure" class="rowColor">
+                            <td class="colFirst"><a href="#secure"><code>secure</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Secure the component with the HTML Sanitizer library on the classpath. Default is true.</td>
+                        </tr>
+                        <tr id="allowFormatting" class="altColor">
+                            <td class="colFirst"><a href="#allowFormatting"><code>allowFormatting</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Whether to allow formatting to be included when secure=true and the HTML is sanitized. Default true.</td>
+                        </tr>
+                        <tr id="allowBlocks" class="rowColor">
+                            <td class="colFirst"><a href="#allowBlocks"><code>allowBlocks</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Whether to allow blocks to be included when secure=true and the HTML is sanitized. Default true.</td>
+                        </tr>
+                        <tr id="allowStyles" class="altColor">
+                            <td class="colFirst"><a href="#allowStyles"><code>allowStyles</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Whether to allow styles to be included when secure=true and the HTML is sanitized. Default true.</td>
+                        </tr>
+                        <tr id="allowLinks" class="rowColor">
+                            <td class="colFirst"><a href="#allowLinks"><code>allowLinks</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Whether to allow links to be included when secure=true and the HTML is sanitized. Default true.</td>
+                        </tr>
+                        <tr id="allowImages" class="altColor">
+                            <td class="colFirst"><a href="#allowImages"><code>allowImages</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Whether to allow images to be included when secure=true and the HTML is sanitized. Default true.</td>
+                        </tr>
+                        <tr id="allowMedia" class="rowColor">
+                            <td class="colFirst"><a href="#allowMedia"><code>allowMedia</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Whether to allow audio/video to be included when secure=true and the HTML is sanitized. Default true.</td>
+                        </tr>
+                        <tr id="allowTables" class="altColor">
+                            <td class="colFirst"><a href="#allowTables"><code>allowTables</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+					</td><td class="colLast">
+                Whether to allow tables to be included when secure=true and the HTML is sanitized. Default true.</td>
+                        </tr>
+                        <tr id="requiredMessage" class="rowColor">
+                            <td class="colFirst"><a href="#requiredMessage"><code>requiredMessage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Message to display when required field validation fails.</td>
+                        </tr>
+                        <tr id="converterMessage" class="altColor">
+                            <td class="colFirst"><a href="#converterMessage"><code>converterMessage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Message to display when conversion fails.</td>
+                        </tr>
+                        <tr id="validatorMessage" class="rowColor">
+                            <td class="colFirst"><a href="#validatorMessage"><code>validatorMessage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Message to display when validation fails.</td>
+                        </tr>
+                        <tr id="validator" class="altColor">
+                            <td class="colFirst"><a href="#validator"><code>validator</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>javax.faces.validator.Validator</code>)
+					</td><td class="colLast">
+                A method expression referring to a method validationg the input.</td>
+                        </tr>
+                        <tr id="style" class="rowColor">
+                            <td class="colFirst"><a href="#style"><code>style</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                CSS style(s) to be applied when this component is rendered.
+            </td>
+                        </tr>
+                        <tr id="styleClass" class="altColor">
+                            <td class="colFirst"><a href="#styleClass"><code>styleClass</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Style class of the main container element. Default value is null.
+            </td>
+                        </tr>
+                        <tr id="mode" class="rowColor">
+                            <td class="colFirst"><a href="#mode"><code>mode</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Editor mode : classic, inline, balloon, balloon-always. Default classic.</td>
+                        </tr>
+                        <tr id="locale" class="altColor">
+                            <td class="colFirst"><a href="#locale"><code>locale</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Object</code>)
+					</td><td class="colLast">
+                String or java.util.Locale representing user locale. Default is a locale specified in view root.
+            </td>
+                        </tr>
+                        <tr id="dir" class="rowColor">
+                            <td class="colFirst"><a href="#dir"><code>dir</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Defines text direction, valid values are "ltr" (default) and "rtl".
+            </td>
+                        </tr>
+                        <tr id="extender" class="altColor">
+                            <td class="colFirst"><a href="#extender"><code>extender</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                Name of javascript function to extend the options of the underlying SunEditor configuration.
+            </td>
+                        </tr>
+                        <tr id="toolbar" class="rowColor">
+                            <td class="colFirst"><a href="#toolbar"><code>toolbar</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+					</td><td class="colLast">
+                JSON array of array using single quote that defines the toolbar.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="bottomNav">
+            <a name="navbar_bottom"></a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow"></a>
+            <ul class="navList" title="Navigation">
+                <li>
+                    <a href="../overview-summary.html">Overview</a>
+                </li>
+                <li>
+                    <a href="tld-summary.html">Library</a>
+                </li>
+                <li class="navBarCell1Rev">Tag</li>
+                <li>
+                    <a href="../help-doc.html">Help</a>
+                </li>
+            </ul>
+        </div>
+        <div class="subNav">
+            <ul class="navList">
+                <li>
+                    <a target="_bottom" href="../index.html?pe/sunEditor.html">
+									Frames
+								</a>
+                </li>
+                <li>
+                    <a target="_bottom" href="sunEditor.html">
+									No Frames
+								</a>
+                </li>
+            </ul>
+            <ul class="navList" id="alltags_navbar_bottom">
+                <li>
+                    <a href="../alltags-noframe.html">All Tags</a>
+                </li>
+            </ul>
+            <script type="text/javascript">
+							document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
+						</script><a name="skip-navbar_bottom"></a>
+        </div>
+        <p class="about">
+            Output generated by <a href="http://vdldoc.omnifaces.org" target="_blank">Vdldoc</a> View Declaration Language Documentation Generator.
+        </p>
+    </body>
+</html>

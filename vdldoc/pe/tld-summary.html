@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xmlns:vdldoc="http://vdldoc.omnifaces.org" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:jakartaee="https://jakarta.ee/xml/ns/jakartaee">
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>pe (PrimeFaces Extensions VDL Documentation)
+			</title>
+        <link rel="stylesheet" type="text/css" title="Style" href="../stylesheet.css">
+    </head>
+    <body>
+        <noscript>
+            <div>JavaScript is disabled on your browser.</div>
+        </noscript>
+        <div class="topNav">
+            <a name="navbar_top"></a><a href="#skip-navbar_top" title="Skip navigation links"></a><a name="navbar_top_firstrow"></a>
+            <ul class="navList" title="Navigation">
+                <li>
+                    <a href="../overview-summary.html">Overview</a>
+                </li>
+                <li class="navBarCell1Rev">Library</li>
+                <li>Tag</li>
+                <li>
+                    <a href="../help-doc.html">Help</a>
+                </li>
+            </ul>
+        </div>
+        <div class="subNav">
+            <ul class="navList">
+                <li>
+                    <a target="_top" href="../index.html?pe/tld-summary.html">
+									Frames
+								</a>
+                </li>
+                <li>
+                    <a href="tld-summary.html" target="_top">No Frames</a>
+                </li>
+            </ul>
+            <ul class="navList" id="alltags_navbar_top">
+                <li>
+                    <a href="../alltags-noframe.html">All Tags</a>
+                </li>
+            </ul>
+            <div>
+                <script type="text/javascript">
+								document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
+							</script>
+            </div>
+            <a name="skip-navbar_top"></a>
+        </div>
+        <div class="header">
+            <h1 title="Library" class="title">pe</h1>
+        </div>
+        <div class="contentContainer">
+            <div class="description">
+                <ul class="blockList">
+                    <li class="blockList">
+                        <dl>
+                            <dt>XML Declaration Syntax:</dt>
+                            <dd>
+                                <code>
+													&lt;anyxmlelement xmlns:pe="http://primefaces.org/ui/extensions"/&gt;
+												</code>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>Description:</dt>
+                            <dd>
+                                <div class="block">PrimeFaces Extensions UI components.</div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="summary">
+                <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Library Summary table, listing library information">
+                    <caption>
+                        <span>Tag Library Information</span><span class="tabEnd">&nbsp;</span>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th class="colFirst" scope="col">Info</th><th class="colLast" scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rowColor">
+                            <td class="colFirst">ID (tag prefix)</td><td class="colLast"><code>pe</code></td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst">URI</td><td class="colLast"><code>http://primefaces.org/ui/extensions</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="summary">
+                <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Tag Summary table, listing tag information">
+                    <caption>
+                        <span>Tag Summary</span><span class="tabEnd">&nbsp;</span>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th class="colOne" scope="col">Tag</th><th class="colLast" scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="convertJson.html">convertJson</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="convertLocale.html">convertLocale</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="sanitizer.html">sanitizer</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="javascript.html">javascript</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="calculator.html">calculator</a></b></td><td class="colLast">
+            Calculator adds a popup calculator to a given input field. Client behavior events: open - fires when the calculator is opened (org.primefaces.extensions.event.OpenEvent), close - fires when the calculator is closed (org.primefaces.extensions.event.CloseEvent), button - fires when each calculator button is pressed (org.primefaces.extensions.event.ButtonEvent).
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="monacoEditor.html">monacoEditor</a></b></td><td class="colLast">
+            A JSF component that wraps the JavaScript libary <a href="https://microsoft.github.io/monaco-editor/">Monaco Editor</a>.
+            This component renders the editor directly into the host page without an iframe. Available client behavior events: <ul>
+            <li>blur - fired when the editor loses focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onDidBlurEditorWidget">IStandaloneCodeEditor#onDidBlurEditorWidget</a>.</li>
+            <li>change - fired if the content has been changed (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidchangemodelcontent">IStandaloneCodeEditor#onDidChangeModelContent</a>.</li>
+            <li>focus - fired when the editor gets focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidfocuseditorwidget">IStandaloneCodeEditor#onDidFocusEditorWidget</a>.</li>,
+            <li>initialized - fired when the editor has become ready (javax.faces.event.AjaxBehaviorEvent). That is, after required resources have been downloaded and the editor was fully created and can now be interacted with by the user.</li>
+            <li>keydown - fired when a key was pressed down on the editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeydown">IStandaloneCodeEditor#onKeyDown</a>.</li>,
+            <li>keyup - fired when a key was released on the editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeyup">IStandaloneCodeEditor#onKeyUp</a>.</li>,
+            <li>mousedown - fired when a mouse button was pressed down on the editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousedown">IStandaloneCodeEditor#onMouseDown</a>.</li>,
+            <li>mousemove - fired when the mouse was moved over the editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousemove">IStandaloneCodeEditor#onMouseMove</a>.</li>,
+            <li>mouseup - fired when a mouse button was released down on the editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmouseup">IStandaloneCodeEditor#onMouseUp</a>.</li>,
+            <li>paste - fired when the text was pasted into the editor (javax.faces.event.AjaxBehaviorEvent),</li>,
+            </ul>
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="monacoEditorFramed.html">monacoEditorFramed</a></b></td><td class="colLast">
+            A JSF component that wraps the JavaScript libary <a href="https://microsoft.github.io/monaco-editor/">Monaco Editor</a>.
+            This component renders the editor inside an iframe for improved encapsulation, as the monaco editor library and its settings are
+            window global. This also mean that you cannot get access to the monaco editor instance from the PrimeFaces widget. However, the
+            widget offers a method <code>invokeMonaco(methodName, ...params)</code> that lets you call a method on the monaco editor instance
+            in the iframe -- the method parameters are sent via <code>postMessage</code>. Note, however, that this does not work for methods
+            that takes a non-data object as a parameter or return such an object (i.e. an object that cannot be structurally cloned). Available
+            client behavior events: <ul>
+            <li>blur - fired when the editor loses focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidblureditorwidget">IStandaloneCodeEditor#onDidBlurEditorWidget</a>.</li>
+            <li>change - fired if the content has been changed (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidchangemodelcontent">IStandaloneCodeEditor#onDidChangeModelContent</a>.</li>
+            <li>focus - fired when the editor gets focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidfocuseditorwidget">IStandaloneCodeEditor#onDidFocusEditorWidget</a>.</li>,
+            <li>initialized - fired when the editor has become ready (javax.faces.event.AjaxBehaviorEvent). That is, after required resources have been downloaded and the editor was fully created and can now be interacted with by the user.</li>
+            <li>keydown - fired when a key was pressed down on the editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeydown">IStandaloneCodeEditor#onKeyDown</a>.</li>,
+            <li>keyup - fired when a key was released on the editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeyup">IStandaloneCodeEditor#onKeyUp</a>.</li>,
+            <li>mousedown - fired when a mouse button was pressed down on the editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousedown">IStandaloneCodeEditor#onMouseDown</a>.</li>,
+            <li>mousemove - fired when the mouse was moved over the editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousemove">IStandaloneCodeEditor#onMouseMove</a>.</li>,
+            <li>mouseup - fired when a mouse button was released down on the editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmouseup">IStandaloneCodeEditor#onMouseUp</a>.</li>,
+            <li>paste - fired when the text was pasted into the editor (javax.faces.event.AjaxBehaviorEvent),</li>,
+            </ul>
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="monacoDiffEditor.html">monacoDiffEditor</a></b></td><td class="colLast">
+            A JSF component that wraps the JavaScript libary <a href="https://microsoft.github.io/monaco-editor/">Monaco Editor</a>.
+            This component renders the diff editor directly into the host page without an iframe. Available client behavior events: <ul>
+            <li>initialized - fired when the editor has become ready (javax.faces.event.AjaxBehaviorEvent). That is, after required resources have been downloaded and the editor was fully created and can now be interacted with by the user.</li>
+            <li>originalBlur - fired when the original editor loses focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidblureditorwidget">IStandaloneCodeEditor#onDidBlurEditorWidget</a>.</li>
+            <li>originalChange - fired if the content of the original editor has been changed (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidchangemodelcontent">IStandaloneCodeEditor#onDidChangeModelContent</a>.</li>
+            <li>originalFocus - fired when the original editor gets focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidfocuseditorwidget">IStandaloneCodeEditor#onDidFocusEditorWidget</a>.</li>,
+            <li>originalKeydown - fired when a key was pressed down on the original editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeydown">IStandaloneCodeEditor#onKeyDown</a>.</li>,
+            <li>originalKeyup - fired when a key was released on the original editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeyup">IStandaloneCodeEditor#onKeyUp</a>.</li>,
+            <li>originalMousedown - fired when a mouse button was pressed down on the original editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousedown">IStandaloneCodeEditor#onMouseDown</a>.</li>,
+            <li>originalMousemove - fired when the mouse was moved over the original editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousemove">IStandaloneCodeEditor#onMouseMove</a>.</li>,
+            <li>originalMouseup - fired when a mouse button was released down on the original editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmouseup">IStandaloneCodeEditor#onMouseUp</a>.</li>,
+            <li>originalPaste - fired when the text was pasted into the original editor (javax.faces.event.AjaxBehaviorEvent),</li>,
+            <li>blur - fired when the modified editor loses focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidblureditorwidget">IStandaloneCodeEditor#onDidBlurEditorWidget</a>.</li>
+            <li>change - fired if the content of the modified editor has been changed (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidchangemodelcontent">IStandaloneCodeEditor#onDidChangeModelContent</a>.</li>
+            <li>focus - fired when the modified editor gets focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidfocuseditorwidget">IStandaloneCodeEditor#onDidFocusEditorWidget</a>.</li>,
+            <li>keydown - fired when a key was pressed down on the modified editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeydown">IStandaloneCodeEditor#onKeyDown</a>.</li>,
+            <li>keyup - fired when a key was released on the modified editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeyup">IStandaloneCodeEditor#onKeyUp</a>.</li>,
+            <li>mousedown - fired when a mouse button was pressed down on the modified editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousedown">IStandaloneCodeEditor#onMouseDown</a>.</li>,
+            <li>mousemove - fired when the mouse was moved over the modified editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousemove">IStandaloneCodeEditor#onMouseMove</a>.</li>,
+            <li>mouseup - fired when a mouse button was released down on the modified editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmouseup">IStandaloneCodeEditor#onMouseUp</a>.</li>,
+            <li>paste - fired when the text was pasted into the modified editor (javax.faces.event.AjaxBehaviorEvent),</li>,
+            </ul>
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="monacoDiffEditorFramed.html">monacoDiffEditorFramed</a></b></td><td class="colLast">
+            A JSF component that wraps the JavaScript libary <a href="https://microsoft.github.io/monaco-editor/">Monaco Editor</a>.
+            This component renders the diff editor inside an iframe for improved encapsulation, as the Monaco editor library and its settings are
+            window global. This also mean that you cannot get access to the monaco editor instance from the PrimeFaces widget. However, the
+            widget offers a method <code>invokeMonaco(methodName, ...params)</code> that lets you call a method on the monaco editor instance
+            in the iframe -- the method parameters are sent via <code>postMessage</code>. Note, however, that this does not work for methods
+            that takes a non-data object as a parameter or return such an object (i.e. an object that cannot be structurally cloned). Available
+            client behavior events: <ul>
+            <li>initialized - fired when the editor has become ready (javax.faces.event.AjaxBehaviorEvent). That is, after required resources have been downloaded and the editor was fully created and can now be interacted with by the user.</li>
+            <li>originalBlur - fired when the original editor loses focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidblureditorwidget">IStandaloneCodeEditor#onDidBlurEditorWidget</a>.</li>
+            <li>originalChange - fired if the content of the original editor has been changed (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidchangemodelcontent">IStandaloneCodeEditor#onDidChangeModelContent</a>.</li>
+            <li>originalFocus - fired when the original editor gets focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidfocuseditorwidget">IStandaloneCodeEditor#onDidFocusEditorWidget</a>.</li>,
+            <li>originalKeydown - fired when a key was pressed down on the original editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeydown">IStandaloneCodeEditor#onKeyDown</a>.</li>,
+            <li>originalKeyup - fired when a key was released on the original editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeyup">IStandaloneCodeEditor#onKeyUp</a>.</li>,
+            <li>originalMousedown - fired when a mouse button was pressed down on the original editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousedown">IStandaloneCodeEditor#onMouseDown</a>.</li>,
+            <li>originalMousemove - fired when the mouse was moved over the original editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousemove">IStandaloneCodeEditor#onMouseMove</a>.</li>,
+            <li>originalMouseup - fired when a mouse button was released down on the original editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmouseup">IStandaloneCodeEditor#onMouseUp</a>.</li>,
+            <li>originalPaste - fired when the text was pasted into the original editor (javax.faces.event.AjaxBehaviorEvent),</li>,
+            <li>blur - fired when the modified editor loses focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidblureditorwidget">IStandaloneCodeEditor#onDidBlurEditorWidget</a>.</li>
+            <li>change - fired if the content of the modified editor has been changed (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidchangemodelcontent">IStandaloneCodeEditor#onDidChangeModelContent</a>.</li>
+            <li>focus - fired when the modified editor gets focus (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#ondidfocuseditorwidget">IStandaloneCodeEditor#onDidFocusEditorWidget</a>.</li>,
+            <li>keydown - fired when a key was pressed down on the modified editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeydown">IStandaloneCodeEditor#onKeyDown</a>.</li>,
+            <li>keyup - fired when a key was released on the modified editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onkeyup">IStandaloneCodeEditor#onKeyUp</a>.</li>,
+            <li>mousedown - fired when a mouse button was pressed down on the modified editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousedown">IStandaloneCodeEditor#onMouseDown</a>.</li>,
+            <li>mousemove - fired when the mouse was moved over the modified editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmousemove">IStandaloneCodeEditor#onMouseMove</a>.</li>,
+            <li>mouseup - fired when a mouse button was released down on the modified editor (javax.faces.event.AjaxBehaviorEvent). Corresponds to <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.IStandaloneCodeEditor.html#onmouseup">IStandaloneCodeEditor#onMouseUp</a>.</li>,
+            <li>paste - fired when the text was pasted into the modified editor (javax.faces.event.AjaxBehaviorEvent),</li>,
+            </ul>
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="clipboard.html">clipboard</a></b></td><td class="colLast">
+            Clipboard allows copy/cut functions without the need for Flash. Client behavior events: success - fires when the clipboard sucessfully copies/cuts (org.primefaces.extensions.event.ClipboardSuccessEvent), error - fires when the clipboard fails to copy/cut (org.primefaces.extensions.event.ClipboardErrorEvent).
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="codeMirror.html">codeMirror</a></b></td><td class="colLast">
+            NOTICE: You must also include the org.primefaces.extensions.resources-codemirror:*.jar artifact. Client behavior events: change - fired every time the content of the editor is changed (javax.faces.event.AjaxBehaviorEvent), highlightComplete - fired whenever the editor's content has been fully highlighted (javax.faces.event.AjaxBehaviorEvent), focus - fired when the editor gets focus (javax.faces.event.AjaxBehaviorEvent), blur - fired when the editor loses focus (javax.faces.event.AjaxBehaviorEvent).
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="counter.html">counter</a></b></td><td class="colLast">
+            Counter component animates a numerical value by counting to it. Client behavior events: start - fires when the counter is started (org.primefaces.event.SelectEvent<Double>), end - fires when the counter is stopped (org.primefaces.event.SelectEvent<Double>).
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="creditCard.html">creditCard</a></b></td><td class="colLast">
+            CreditCard will take any card form and make it the best part of the checkout process.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="dynaForm.html">dynaForm</a></b></td><td class="colLast">
+            DynaForm allows to show a dynamic form described by model.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="dynaFormControl.html">dynaFormControl</a></b></td><td class="colLast">
+            Specifies a control for a certain typed element within DynaForm.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="fluidGrid.html">fluidGrid</a></b></td><td class="colLast">
+            FluidGrid is a grid layout library. Client behavior events: layoutComplete - fired after a layout and all positioning transitions have been completed. (org.primefaces.extensions.event.LayoutCompleteEvent).
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="fluidGridItem.html">fluidGridItem</a></b></td><td class="colLast">
+            Specifies an item for a certain typed element within FluidGrid.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="fuzzySearch.html">fuzzySearch</a></b></td><td class="colLast">"Fast SublimeText-like fuzzy search for JavaScript."</td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="head.html">head</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="imageAreaSelect.html">imageAreaSelect</a></b></td><td class="colLast">
+            Widget for selecting a rectangular area of an image. Client behavior events: selectEnd - fired after the selection finished (org.primefaces.extensions.event.ImageAreaSelectEvent), selectStart - fired after the selection started (org.primefaces.extensions.event.ImageAreaSelectEvent), selectChange - fired after the selection changed (org.primefaces.extensions.event.ImageAreaSelectEvent).
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="imageRotateAndResize.html">imageRotateAndResize</a></b></td><td class="colLast">
+            Widget for rotating or resizing an image. Client behavior events: rotate - fired after image rotation (org.primefaces.extensions.event.RotateEvent), resize - fired after image resizing (org.primefaces.extensions.event.ResizeEvent).
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="imageZoom.html">imageZoom</a></b></td><td class="colLast">
+            Widget for zooming an image.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="legend.html">legend</a></b></td><td class="colLast">
+            Legend is a key value based legend.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="remoteCommand.html">remoteCommand</a></b></td><td class="colLast">
+            RemoteCommand provides a way to execute JSF backing bean methods directly from javascript.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="assignableParam.html">assignableParam</a></b></td><td class="colLast">
+            AssignableParam can be used the apply a parameter of the RemoteCommand to a backing bean.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="methodParam.html">methodParam</a></b></td><td class="colLast">
+            Method can be used to receive a parameter of the RemoteCommand in the actionListener or action method.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="methodSignature.html">methodSignature</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="tooltip.html">tooltip</a></b></td><td class="colLast">
+            Advanced Tooltip component.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="layout.html">layout</a></b></td><td class="colLast">
+            Page Layout component. Client behavior events: open - fires after a layout pane gets opened (org.primefaces.extensions.event.OpenEvent), close - fires after a layout pane gets closed (org.primefaces.extensions.event.CloseEvent), resize - fires after a layout pane gets resized (org.primefaces.extensions.event.ResizeEvent).
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="layoutPane.html">layoutPane</a></b></td><td class="colLast">
+            Layout pane within Layout component. 5 regions are supported: 'north', 'south', 'center', 'west' und 'east'.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="masterDetail.html">masterDetail</a></b></td><td class="colLast">
+            MasterDetail component allows to group contents into levels (sections) and saves page space. Smart and flexible navigation between levels via breadcrumbs or command components gives a neat and stylish interface for users.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="masterDetailLevel.html">masterDetailLevel</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="selectDetailLevel.html">selectDetailLevel</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="blockUI.html">blockUI</a></b></td><td class="colLast">
+            blockUI blocks any piece of page during various Ajax calls.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="timePicker.html">timePicker</a></b></td><td class="colLast">
+            Time picker component for time (hours / minutes) inputs. Client behavior events: timeSelect - fires when an hour / minutes is selected (org.primefaces.extensions.event.TimeSelectEvent), close - fires when the time picker is closed (org.primefaces.extensions.event.CloseEvent), beforeShow - fires before the time picker is rendered and displayed (org.primefaces.extensions.event.BeforeShowEvent).
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="triStateManyCheckbox.html">triStateManyCheckbox</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="waypoint.html">waypoint</a></b></td><td class="colLast">
+            Waypoint makes it easy to execute a custom logic whenever you scroll to an element. Client behavior events: reached - fired when the user scrolls past the element. (org.primefaces.extensions.event.WaypointEvent)
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="switch.html">switch</a></b></td><td class="colLast">
+            Tag to simulate a java switch.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="case.html">case</a></b></td><td class="colLast">
+            Tag which defines a case for the switch component.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="defaultCase.html">defaultCase</a></b></td><td class="colLast">
+            Tag which defines the default case for the switch component.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="qrCode.html">qrCode</a></b></td><td class="colLast">
+            Generate QR codes dynamically
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="documentViewer.html">documentViewer</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="gChart.html">gChart</a></b></td><td class="colLast">
+            GChart is a JSF wrapper of Google Charts API. Client behavior events: select - fired when a "row" is selected (org.primefaces.event.SelectEvent)
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="timer.html">timer</a></b></td><td class="colLast">
+            Timer Component
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="slideout.html">slideout</a></b></td><td class="colLast">
+            SlideOut adds a tab slideout from the screen edge.  Client behavior events: open - fires when the slideout is opened (org.primefaces.extensions.event.OpenEvent), close - fires when the slideout is closed (org.primefaces.extensions.event.CloseEvent).
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="speedtest.html">speedtest</a></b></td><td class="colLast">
+            Speedtest adds a view with Speedtest gauges. Fires an event when the speedtest has been finished.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="sheet.html">sheet</a></b></td><td class="colLast">
+            Data sheet providing Excel like editing, frozen columns and rows, copy/paste, sorting, etc.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="sheetcolumn.html">sheetcolumn</a></b></td><td class="colLast">
+            Data sheet column used to define the available columns in a Sheet component.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="orgchart.html">orgchart</a></b></td><td class="colLast">
+            OrgChart based on https://github.com/dabeng/OrgChart
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="inputOtp.html">inputOtp</a></b></td><td class="colLast">
+            InputOtp is an input component suitable for inserting fixed-size PINs or OTPs.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="inputPhone.html">inputPhone</a></b></td><td class="colLast">
+            InputPhone is an extension to the inputText with optimized handling for phone numbers.
+     Client behavior events: countrySelect - fires when a country is selected (org.primefaces.event.SelectEvent).
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="keynote.html">keynote</a></b></td><td class="colLast">
+            Keynote is an HTML presentation component that enables to create fully-featured and beautiful presentations.
+     Client behavior events: slideChanged - fires each time the slide changes (org.primefaces.event.KeynoteEvent), 
+                             slideTransitionEnd - fires instantly as soon as the slide changes (org.primefaces.event.KeynoteEvent).
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="keynoteItem.html">keynoteItem</a></b></td><td class="colLast">
+            Specifies an item for a certain typed element within Keynote.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="timeAgo.html">timeAgo</a></b></td><td class="colLast">
+            TimeAgo renders automatically updating fuzzy timestamps.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="codeScanner.html">codeScanner</a></b></td><td class="colLast">
+            CodeScanner allows you to scan bar and QR codes using a device camera.
+     Client behavior events: codeScanned - fires when a code is scanned (org.primefaces.event.SelectEvent).
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="lightSwitch.html">lightSwitch</a></b></td><td class="colLast">
+            LightSwitch automatically switched to light or dark theme depending on the OS settings.
+     Client behavior events: switch - fires on switch (org.primefaces.event.SelectEvent).
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="cookiePolicy.html">cookiePolicy</a></b></td><td class="colLast">
+            Cookie Policy component.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="saveCookiePolicy.html">saveCookiePolicy</a></b></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="localized.html">localized</a></b></td><td class="colLast">
+            Localized component reads file contents from the /WEB-INF/pfe-localized/ folder, or uses inline content, in the appropriate language (and country), with opional EL and Markdown support.
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="session.html">session</a></b></td><td class="colLast">Gives client-side Javascript events when session will expire.</td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="sunEditor.html">sunEditor</a></b></td><td class="colLast">
+            SunEditor component, wysiwyg html editor in js.
+            Client behavior events:
+            change - on change (javax.faces.event.AjaxBehaviorEvent),
+            scroll - on scroll (javax.faces.event.AjaxBehaviorEvent),
+            mousedown - on mouseDown (javax.faces.event.AjaxBehaviorEvent),
+            click - on click (javax.faces.event.AjaxBehaviorEvent),
+            input - on input (javax.faces.event.AjaxBehaviorEvent),
+            keydown - on keyDown (javax.faces.event.AjaxBehaviorEvent),
+            keyup - on keyUp (javax.faces.event.AjaxBehaviorEvent),
+            focus - on focus (javax.faces.event.AjaxBehaviorEvent),
+            blur - on blur (javax.faces.event.AjaxBehaviorEvent),
+            paste - on paste (javax.faces.event.AjaxBehaviorEvent),
+            copy - on copy (javax.faces.event.AjaxBehaviorEvent),
+            cut - on cut (javax.faces.event.AjaxBehaviorEvent),
+            drop - on drop (javax.faces.event.AjaxBehaviorEvent),
+            save - on save (javax.faces.event.AjaxBehaviorEvent).
+            initialize - when editor is initialized (javax.faces.event.AjaxBehaviorEvent).</td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="clockpicker.html">clockpicker</a></b></td><td class="colLast">ClockPicker based on https://weareoutman.github.io/clockpicker/</td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="osmap.html">osmap</a></b></td><td class="colLast">Open Street Map using leaflet https://leafletjs.com/</td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="echart.html">echart</a></b></td><td class="colLast">
+            Apache ECharts component using raw JSON model.
+        </td>
+                        </tr>
+                        <tr class="rowColor">
+                            <td class="colOne"><b><a href="inputPlace.html">inputPlace</a></b></td><td class="colLast">
+            InputPlace is a component to wrap Google Places AutoComplete functionality.
+               Client behavior events: placeChanged - fires when a place is selected (org.primefaces.event.SelectEvent)
+        </td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colOne"><b><a href="markdownEditor.html">markdownEditor</a></b></td><td class="colLast">
+            MarkdownEditor is an extension text area replacement for writing beautiful and understandable Markdown.
+        </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Function Summary table, listing function information">
+                    <caption>
+                        <span>Function Summary</span><span class="tabEnd">&nbsp;</span>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th class="colFirst" scope="col">Type</th><th class="colOne" scope="col">Function</th><th class="colLast" scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rowColor">
+                            <td class="colFirst"><code>java.lang.String</code></td><td class="colOne"><code><b><a href="escapeSelector.fn.html">escapeSelector</a></b>(java.lang.String)</code></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                        <tr class="altColor">
+                            <td class="colFirst"><code>java.lang.String</code></td><td class="colOne"><code><b><a href="encodeURL.fn.html">encodeURL</a></b>(java.lang.String)</code></td><td class="colLast"><i>No Description</i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="bottomNav">
+            <a name="navbar_bottom"></a><a href="#skip-navbar_bottom" title="Skip navigation links"></a><a name="navbar_bottom_firstrow"></a>
+            <ul class="navList" title="Navigation">
+                <li>
+                    <a href="../overview-summary.html">Overview</a>
+                </li>
+                <li class="navBarCell1Rev">Library</li>
+                <li>Tag</li>
+                <li>
+                    <a href="../help-doc.html">Help</a>
+                </li>
+            </ul>
+        </div>
+        <div class="subNav">
+            <ul class="navList">
+                <li>
+                    <a target="_top" href="../index.html?pe/tld-summary.html">
+									Frames
+								</a>
+                </li>
+                <li>
+                    <a href="tld-summary.html" target="_top">No Frames</a>
+                </li>
+            </ul>
+            <ul class="navList" id="alltags_navbar_bottom">
+                <li>
+                    <a href="../alltags-noframe.html">All Tags</a>
+                </li>
+            </ul>
+            <script type="text/javascript">
+							document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
+						</script><a name="skip-navbar_bottom"></a>
+        </div>
+        <p class="about">
+            Output generated by <a href="http://vdldoc.omnifaces.org" target="_blank">Vdldoc</a> View Declaration Language Documentation Generator.
+        </p>
+    </body>
+</html>
