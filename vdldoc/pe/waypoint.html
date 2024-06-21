@@ -3,7 +3,7 @@
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>waypoint (PrimeFaces Extensions VDL Documentation)
-			</title>
+            </title>
         <meta name="keywords" content="$title">
         <link rel="stylesheet" type="text/css" title="Style" href="../stylesheet.css">
     </head>
@@ -30,13 +30,13 @@
             <ul class="navList">
                 <li>
                     <a target="_top" href="../index.html?pe/waypoint.html">
-									Frames
-								</a>
+                                    Frames
+                                </a>
                 </li>
                 <li>
                     <a target="_top" href="waypoint.html">
-									No Frames
-								</a>
+                                    No Frames
+                                </a>
                 </li>
             </ul>
             <ul class="navList" id="alltags_navbar_top">
@@ -46,16 +46,16 @@
             </ul>
             <div>
                 <script type="text/javascript">
-								document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
-							</script>
+                                document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
+                            </script>
             </div>
             <a name="skip-navbar_top"></a>
         </div>
         <div class="header">
             <h1 title="Library" class="title">pe</h1>
             <h2 class="title">
-							Tag
-							waypoint</h2>
+                            Tag
+                            waypoint</h2>
         </div>
         <div class="contentContainer">
             <div class="description">
@@ -109,92 +109,92 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr id="id" class="rowColor">
-                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Unique identifier of the component in a namingContainer.
-            </td>
-                        </tr>
-                        <tr id="rendered" class="altColor">
-                            <td class="colFirst"><a href="#rendered"><code>rendered</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                Boolean value to specify the rendering of the component, when set to false component will not be rendered.
-            </td>
-                        </tr>
                         <tr id="binding" class="rowColor">
-                            <td class="colFirst"><a href="#binding"><code>binding</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#binding"><code>binding</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>javax.faces.component.UIComponent</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 An EL expression referring to a server side UIComponent instance in a backing bean.
             </td>
                         </tr>
-                        <tr id="widgetVar" class="altColor">
-                            <td class="colFirst"><a href="#widgetVar"><code>widgetVar</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Name of the client side widget.
-            </td>
-                        </tr>
-                        <tr id="for" class="rowColor">
-                            <td class="colFirst"><a href="#for"><code>for</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                The target component registered as waypoint. If null, the parent component will be taken as target. Default is null.
-            </td>
-                        </tr>
-                        <tr id="forContext" class="altColor">
-                            <td class="colFirst"><a href="#forContext"><code>forContext</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                The context defines which scrollable element the waypoint belongs to and acts within. It can be a component or plain HTML element like a div. Default is window if nothing specified.
-            </td>
-                        </tr>
-                        <tr id="enabled" class="rowColor">
-                            <td class="colFirst"><a href="#enabled"><code>enabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                If false, this waypoint will be created but will be disabled from triggering. You can call widget's method "enable" to turn it back on. Default is true.
-            </td>
-                        </tr>
-                        <tr id="horizontal" class="altColor">
-                            <td class="colFirst"><a href="#horizontal"><code>horizontal</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                Default waypoints live on the vertical axis. Their offset is calculated in relation to the top of the viewport and they listen for vertical scroll changes. If horizontal is set to true, offset is calculated in relation to the left of the viewport and listens for horizontal scroll changes. For instance, the value 50 means "when the left side of this element reaches 50px from the left side of the viewport". Default is false.
-            </td>
-                        </tr>
-                        <tr id="offset" class="rowColor">
-                            <td class="colFirst"><a href="#offset"><code>offset</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                This option determines how far the top of the element must be from the top of the viewport to trigger a waypoint (callback function). It can be a number, which is taken as a number of pixels (can be also negativ, e.g. -10), a string representing a percentage of the viewport height (e.g. '50%') or a function that will return a number of pixels. Default is 0.
-            </td>
-                        </tr>
                         <tr id="continuous" class="altColor">
-                            <td class="colFirst"><a href="#continuous"><code>continuous</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#continuous"><code>continuous</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 If true, and multiple waypoints are triggered in one scroll, this waypoint will trigger even if it is not the last waypoint reached. If false, it will only trigger if it is the last waypoint. Default is true.
             </td>
                         </tr>
-                        <tr id="triggerOnce" class="rowColor">
-                            <td class="colFirst"><a href="#triggerOnce"><code>triggerOnce</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="enabled" class="rowColor">
+                            <td class="colFirst"><a href="#enabled"><code>enabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
+                If false, this waypoint will be created but will be disabled from triggering. You can call widget's method "enable" to turn it back on. Default is true.
+            </td>
+                        </tr>
+                        <tr id="for" class="altColor">
+                            <td class="colFirst"><a href="#for"><code>for</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                The target component registered as waypoint. If null, the parent component will be taken as target. Default is null.
+            </td>
+                        </tr>
+                        <tr id="forContext" class="rowColor">
+                            <td class="colFirst"><a href="#forContext"><code>forContext</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                The context defines which scrollable element the waypoint belongs to and acts within. It can be a component or plain HTML element like a div. Default is window if nothing specified.
+            </td>
+                        </tr>
+                        <tr id="horizontal" class="altColor">
+                            <td class="colFirst"><a href="#horizontal"><code>horizontal</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+                    </td><td class="colLast">
+                Default waypoints live on the vertical axis. Their offset is calculated in relation to the top of the viewport and they listen for vertical scroll changes. If horizontal is set to true, offset is calculated in relation to the left of the viewport and listens for horizontal scroll changes. For instance, the value 50 means "when the left side of this element reaches 50px from the left side of the viewport". Default is false.
+            </td>
+                        </tr>
+                        <tr id="id" class="rowColor">
+                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Unique identifier of the component in a namingContainer.
+            </td>
+                        </tr>
+                        <tr id="offset" class="altColor">
+                            <td class="colFirst"><a href="#offset"><code>offset</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                This option determines how far the top of the element must be from the top of the viewport to trigger a waypoint (callback function). It can be a number, which is taken as a number of pixels (can be also negativ, e.g. -10), a string representing a percentage of the viewport height (e.g. '50%') or a function that will return a number of pixels. Default is 0.
+            </td>
+                        </tr>
+                        <tr id="rendered" class="rowColor">
+                            <td class="colFirst"><a href="#rendered"><code>rendered</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+                    </td><td class="colLast">
+                Boolean value to specify the rendering of the component, when set to false component will not be rendered.
+            </td>
+                        </tr>
+                        <tr id="triggerOnce" class="altColor">
+                            <td class="colFirst"><a href="#triggerOnce"><code>triggerOnce</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+                    </td><td class="colLast">
                 If true, the waypoint will be destroyed when triggered. Default is false.
+            </td>
+                        </tr>
+                        <tr id="widgetVar" class="rowColor">
+                            <td class="colFirst"><a href="#widgetVar"><code>widgetVar</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Name of the client side widget.
             </td>
                         </tr>
                     </tbody>
@@ -220,13 +220,13 @@
             <ul class="navList">
                 <li>
                     <a target="_bottom" href="../index.html?pe/waypoint.html">
-									Frames
-								</a>
+                                    Frames
+                                </a>
                 </li>
                 <li>
                     <a target="_bottom" href="waypoint.html">
-									No Frames
-								</a>
+                                    No Frames
+                                </a>
                 </li>
             </ul>
             <ul class="navList" id="alltags_navbar_bottom">
@@ -235,8 +235,8 @@
                 </li>
             </ul>
             <script type="text/javascript">
-							document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
-						</script><a name="skip-navbar_bottom"></a>
+                            document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
+                        </script><a name="skip-navbar_bottom"></a>
         </div>
         <p class="about">
             Output generated by <a href="http://vdldoc.omnifaces.org" target="_blank">Vdldoc</a> View Declaration Language Documentation Generator.

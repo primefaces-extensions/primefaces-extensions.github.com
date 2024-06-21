@@ -3,7 +3,7 @@
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>qrCode (PrimeFaces Extensions VDL Documentation)
-			</title>
+            </title>
         <meta name="keywords" content="$title">
         <link rel="stylesheet" type="text/css" title="Style" href="../stylesheet.css">
     </head>
@@ -30,13 +30,13 @@
             <ul class="navList">
                 <li>
                     <a target="_top" href="../index.html?pe/qrCode.html">
-									Frames
-								</a>
+                                    Frames
+                                </a>
                 </li>
                 <li>
                     <a target="_top" href="qrCode.html">
-									No Frames
-								</a>
+                                    No Frames
+                                </a>
                 </li>
             </ul>
             <ul class="navList" id="alltags_navbar_top">
@@ -46,16 +46,16 @@
             </ul>
             <div>
                 <script type="text/javascript">
-								document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
-							</script>
+                                document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
+                            </script>
             </div>
             <a name="skip-navbar_top"></a>
         </div>
         <div class="header">
             <h1 title="Library" class="title">pe</h1>
             <h2 class="title">
-							Tag
-							qrCode</h2>
+                            Tag
+                            qrCode</h2>
         </div>
         <div class="contentContainer">
             <div class="description">
@@ -109,35 +109,147 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr id="id" class="rowColor">
-                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="background" class="rowColor">
+                            <td class="colFirst"><a href="#background"><code>background</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Unique identifier of the component in a namingContainer.
+                    </td><td class="colLast">
+                Background color or image element, empty for transparent background. Default is transparent
             </td>
                         </tr>
                         <tr id="binding" class="altColor">
-                            <td class="colFirst"><a href="#binding"><code>binding</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#binding"><code>binding</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>javax.faces.component.UIComponent</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 An EL expression referring to a server side UIComponent instance in a backing bean.
             </td>
                         </tr>
-                        <tr id="renderMethod" class="rowColor">
-                            <td class="colFirst"><a href="#renderMethod"><code>renderMethod</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="ecLevel" class="rowColor">
+                            <td class="colFirst"><a href="#ecLevel"><code>ecLevel</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
+                error correction level: ''L'', ''M'', ''Q'' or ''H'. Default value ''L''
+            </td>
+                        </tr>
+                        <tr id="fillColor" class="altColor">
+                            <td class="colFirst"><a href="#fillColor"><code>fillColor</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Code color or image element. Default is #000
+            </td>
+                        </tr>
+                        <tr id="fontColor" class="rowColor">
+                            <td class="colFirst"><a href="#fontColor"><code>fontColor</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                QRCode content label color. Default is #000
+            </td>
+                        </tr>
+                        <tr id="fontName" class="altColor">
+                            <td class="colFirst"><a href="#fontName"><code>fontName</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                QRCode content label font. Default is sans
+            </td>
+                        </tr>
+                        <tr id="id" class="rowColor">
+                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Unique identifier of the component in a namingContainer.
+            </td>
+                        </tr>
+                        <tr id="label" class="altColor">
+                            <td class="colFirst"><a href="#label"><code>label</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                QRCode content label. Default is empty
+            </td>
+                        </tr>
+                        <tr id="leftOffset" class="rowColor">
+                            <td class="colFirst"><a href="#leftOffset"><code>leftOffset</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Long</code>)
+                    </td><td class="colLast">
+                offset in pixel if drawn onto existing canvas. Default is 0
+            </td>
+                        </tr>
+                        <tr id="maxVersion" class="altColor">
+                            <td class="colFirst"><a href="#maxVersion"><code>maxVersion</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Integer</code>)
+                    </td><td class="colLast">
+                Version max range. Default value is 40
+            </td>
+                        </tr>
+                        <tr id="minVersion" class="rowColor">
+                            <td class="colFirst"><a href="#minVersion"><code>minVersion</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Integer</code>)
+                    </td><td class="colLast">
+                Version min range. Default value is 1
+            </td>
+                        </tr>
+                        <tr id="mPosX" class="altColor">
+                            <td class="colFirst"><a href="#mPosX"><code>mPosX</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Double</code>)
+                    </td><td class="colLast">
+                Label relative Y position. Default value is 0.5
+            </td>
+                        </tr>
+                        <tr id="mPosY" class="rowColor">
+                            <td class="colFirst"><a href="#mPosY"><code>mPosY</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Double</code>)
+                    </td><td class="colLast">
+                Label relative Y position. Default value is 0.5
+            </td>
+                        </tr>
+                        <tr id="mSize" class="altColor">
+                            <td class="colFirst"><a href="#mSize"><code>mSize</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Double</code>)
+                    </td><td class="colLast">
+                Label size percentage. Default value is 0.1
+            </td>
+                        </tr>
+                        <tr id="quiet" class="rowColor">
+                            <td class="colFirst"><a href="#quiet"><code>quiet</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Double</code>)
+                    </td><td class="colLast">
+                Quiet zone in modules. Default value is 0.0
+            </td>
+                        </tr>
+                        <tr id="radius" class="altColor">
+                            <td class="colFirst"><a href="#radius"><code>radius</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Double</code>)
+                    </td><td class="colLast">
+                Corner radius relative to module width: 0.0 .. 0.5. Default value is 0.0
+            </td>
+                        </tr>
+                        <tr id="renderMethod" class="rowColor">
+                            <td class="colFirst"><a href="#renderMethod"><code>renderMethod</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
                 Render method: canvas, img or div. Default value is canvas
             </td>
                         </tr>
                         <tr id="renderMode" class="altColor">
-                            <td class="colFirst"><a href="#renderMode"><code>renderMode</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#renderMode"><code>renderMode</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Integer</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 Render method:  0: normal
                                          1: label strip
                                          2: label box
@@ -146,157 +258,45 @@
                         Default value is 0
             </td>
                         </tr>
-                        <tr id="minVersion" class="rowColor">
-                            <td class="colFirst"><a href="#minVersion"><code>minVersion</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Integer</code>)
-					</td><td class="colLast">
-                Version min range. Default value is 1
-            </td>
-                        </tr>
-                        <tr id="maxVersion" class="altColor">
-                            <td class="colFirst"><a href="#maxVersion"><code>maxVersion</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Integer</code>)
-					</td><td class="colLast">
-                Version max range. Default value is 40
-            </td>
-                        </tr>
-                        <tr id="ecLevel" class="rowColor">
-                            <td class="colFirst"><a href="#ecLevel"><code>ecLevel</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                error correction level: ''L'', ''M'', ''Q'' or ''H'. Default value ''L''
-            </td>
-                        </tr>
-                        <tr id="leftOffset" class="altColor">
-                            <td class="colFirst"><a href="#leftOffset"><code>leftOffset</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="size" class="rowColor">
+                            <td class="colFirst"><a href="#size"><code>size</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Long</code>)
-					</td><td class="colLast">
-                offset in pixel if drawn onto existing canvas. Default is 0
-            </td>
-                        </tr>
-                        <tr id="topOffset" class="rowColor">
-                            <td class="colFirst"><a href="#topOffset"><code>topOffset</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Long</code>)
-					</td><td class="colLast">
-                offset in pixel if drawn onto existing canvas. Default is 0
-            </td>
-                        </tr>
-                        <tr id="size" class="altColor">
-                            <td class="colFirst"><a href="#size"><code>size</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Long</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 Size in pixel. Default is 200px
             </td>
                         </tr>
-                        <tr id="text" class="rowColor">
-                            <td class="colFirst"><a href="#text"><code>text</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                QRCode content text. Default is empty
-            </td>
-                        </tr>
-                        <tr id="fontName" class="altColor">
-                            <td class="colFirst"><a href="#fontName"><code>fontName</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                QRCode content label font. Default is sans
-            </td>
-                        </tr>
-                        <tr id="fontColor" class="rowColor">
-                            <td class="colFirst"><a href="#fontColor"><code>fontColor</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                QRCode content label color. Default is #000
-            </td>
-                        </tr>
-                        <tr id="label" class="altColor">
-                            <td class="colFirst"><a href="#label"><code>label</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                QRCode content label. Default is empty
-            </td>
-                        </tr>
-                        <tr id="fillColor" class="rowColor">
-                            <td class="colFirst"><a href="#fillColor"><code>fillColor</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Code color or image element. Default is #000
-            </td>
-                        </tr>
-                        <tr id="background" class="altColor">
-                            <td class="colFirst"><a href="#background"><code>background</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Background color or image element, empty for transparent background. Default is transparent
-            </td>
-                        </tr>
-                        <tr id="radius" class="rowColor">
-                            <td class="colFirst"><a href="#radius"><code>radius</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Double</code>)
-					</td><td class="colLast">
-                Corner radius relative to module width: 0.0 .. 0.5. Default value is 0.0
-            </td>
-                        </tr>
-                        <tr id="quiet" class="altColor">
-                            <td class="colFirst"><a href="#quiet"><code>quiet</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Double</code>)
-					</td><td class="colLast">
-                Quiet zone in modules. Default value is 0.0
-            </td>
-                        </tr>
-                        <tr id="mSize" class="rowColor">
-                            <td class="colFirst"><a href="#mSize"><code>mSize</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Double</code>)
-					</td><td class="colLast">
-                Label size percentage. Default value is 0.1
-            </td>
-                        </tr>
-                        <tr id="mPosX" class="altColor">
-                            <td class="colFirst"><a href="#mPosX"><code>mPosX</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Double</code>)
-					</td><td class="colLast">
-                Label relative Y position. Default value is 0.5
-            </td>
-                        </tr>
-                        <tr id="mPosY" class="rowColor">
-                            <td class="colFirst"><a href="#mPosY"><code>mPosY</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Double</code>)
-					</td><td class="colLast">
-                Label relative Y position. Default value is 0.5
-            </td>
-                        </tr>
                         <tr id="style" class="altColor">
-                            <td class="colFirst"><a href="#style"><code>style</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#style"><code>style</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 CSS style(s) to be applied when this component is rendered.
             </td>
                         </tr>
                         <tr id="styleClass" class="rowColor">
-                            <td class="colFirst"><a href="#styleClass"><code>styleClass</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#styleClass"><code>styleClass</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 Space-separated list of CSS style class(es) to be applied when this element is rendered.
                 This value is passed through as the "class" attribute to the generated markup.
+            </td>
+                        </tr>
+                        <tr id="text" class="altColor">
+                            <td class="colFirst"><a href="#text"><code>text</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                QRCode content text. Default is empty
+            </td>
+                        </tr>
+                        <tr id="topOffset" class="rowColor">
+                            <td class="colFirst"><a href="#topOffset"><code>topOffset</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Long</code>)
+                    </td><td class="colLast">
+                offset in pixel if drawn onto existing canvas. Default is 0
             </td>
                         </tr>
                     </tbody>
@@ -322,13 +322,13 @@
             <ul class="navList">
                 <li>
                     <a target="_bottom" href="../index.html?pe/qrCode.html">
-									Frames
-								</a>
+                                    Frames
+                                </a>
                 </li>
                 <li>
                     <a target="_bottom" href="qrCode.html">
-									No Frames
-								</a>
+                                    No Frames
+                                </a>
                 </li>
             </ul>
             <ul class="navList" id="alltags_navbar_bottom">
@@ -337,8 +337,8 @@
                 </li>
             </ul>
             <script type="text/javascript">
-							document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
-						</script><a name="skip-navbar_bottom"></a>
+                            document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
+                        </script><a name="skip-navbar_bottom"></a>
         </div>
         <p class="about">
             Output generated by <a href="http://vdldoc.omnifaces.org" target="_blank">Vdldoc</a> View Declaration Language Documentation Generator.

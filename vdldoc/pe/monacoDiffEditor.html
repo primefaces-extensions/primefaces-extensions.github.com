@@ -3,7 +3,7 @@
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>monacoDiffEditor (PrimeFaces Extensions VDL Documentation)
-			</title>
+            </title>
         <meta name="keywords" content="$title">
         <link rel="stylesheet" type="text/css" title="Style" href="../stylesheet.css">
     </head>
@@ -30,13 +30,13 @@
             <ul class="navList">
                 <li>
                     <a target="_top" href="../index.html?pe/monacoDiffEditor.html">
-									Frames
-								</a>
+                                    Frames
+                                </a>
                 </li>
                 <li>
                     <a target="_top" href="monacoDiffEditor.html">
-									No Frames
-								</a>
+                                    No Frames
+                                </a>
                 </li>
             </ul>
             <ul class="navList" id="alltags_navbar_top">
@@ -46,16 +46,16 @@
             </ul>
             <div>
                 <script type="text/javascript">
-								document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
-							</script>
+                                document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
+                            </script>
             </div>
             <a name="skip-navbar_top"></a>
         </div>
         <div class="header">
             <h1 title="Library" class="title">pe</h1>
             <h2 class="title">
-							Tag
-							monacoDiffEditor</h2>
+                            Tag
+                            monacoDiffEditor</h2>
         </div>
         <div class="contentContainer">
             <div class="description">
@@ -130,396 +130,96 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr id="id" class="rowColor">
-                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Unique identifier of the component in a naming container.
-            </td>
-                        </tr>
-                        <tr id="rendered" class="altColor">
-                            <td class="colFirst"><a href="#rendered"><code>rendered</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="autoResize" class="rowColor">
+                            <td class="colFirst"><a href="#autoResize"><code>autoResize</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                Boolean value to specify the rendering of the component, when set to false component will not be rendered.
+                    </td><td class="colLast">
+                If <code>true</code>, resizes the editor automatically when the iframe element changes its size.
+                Please note that this makes uses of the <a href="https://wicg.github.io/ResizeObserver/">new ResizeObserver API</a>
+                and <a href="https://caniuse.com/#feat=resizeobserver">works only in newer browers.</a> This widget checks whether
+                ResizeObserver API is available, and when it is not, no resizing is performed. To support resizing for older browsers,
+                search for a ResizeObserver polyfill. If you know when the size of the editor conainer could have changed, you can resize
+                the editor manually via <code>PF("editorWidgetVar").layout()</code>
             </td>
                         </tr>
-                        <tr id="style" class="rowColor">
-                            <td class="colFirst"><a href="#style"><code>style</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="basename" class="altColor">
+                            <td class="colFirst"><a href="#basename"><code>basename</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                CSS style(s) to be applied when this component is rendered.
-            </td>
-                        </tr>
-                        <tr id="styleClass" class="altColor">
-                            <td class="colFirst"><a href="#styleClass"><code>styleClass</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Space-separated list of CSS style class(es) to be applied when this element is rendered.
-                This value is passed through as the "class" attribute to the generated markup.
+                    </td><td class="colLast">
+                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the basename for that URI, without the extension. If not given, default to 'file'.
             </td>
                         </tr>
                         <tr id="binding" class="rowColor">
-                            <td class="colFirst"><a href="#binding"><code>binding</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#binding"><code>binding</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>javax.faces.component.UIComponent</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 An EL expression referring to a server side UIComponent instance in a backing bean.
             </td>
                         </tr>
-                        <tr id="widgetVar" class="altColor">
-                            <td class="colFirst"><a href="#widgetVar"><code>widgetVar</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Name of the client side widget.
-            </td>
-                        </tr>
-                        <tr id="value" class="rowColor">
-                            <td class="colFirst"><a href="#value"><code>value</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>org.primefaces.extensions.model.monacoeditor.MonacoDiffEditorModel</code>)
-					</td><td class="colLast">
-                Value of the component. Must be a org.primefaces.extensions.model.monacoeditor.MonacoDiffEditorModel
-            </td>
-                        </tr>
-                        <tr id="readonly" class="altColor">
-                            <td class="colFirst"><a href="#readonly"><code>readonly</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                Defines if the modified editor is readonly. This option makes the UI not editable, but still
-                accepts values that are submitted (e.g. when the editor value was changed via JavaScript). Use
-                <code>disabled</code> if submitted values should not be accepted.
-            </td>
-                        </tr>
-                        <tr id="originalReadonly" class="rowColor">
-                            <td class="colFirst"><a href="#originalReadonly"><code>originalReadonly</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                Defines if the original editor is readonly. This option makes the UI not editable, but
-                still accepts values that are submitted (e.g. when the editor value was changed via JavaScript).
-                Use <code>originalDisabled</code> if submitted values should not be accepted. Defaults to
-                <code>false</code>.
-            </td>
-                        </tr>
-                        <tr id="disabled" class="altColor">
-                            <td class="colFirst"><a href="#disabled"><code>disabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                Defines if the modified editor is disabled. This option does not accept a value to be submitted and
-                ensures the model values stays the same (server validation).
-            </td>
-                        </tr>
-                        <tr id="originalDisabled" class="rowColor">
-                            <td class="colFirst"><a href="#originalDisabled"><code>originalDisabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                Defines if the original editor is disabled. This option does not accept a value to be submitted and
-                ensures the model values stays the same (server validation). Defaults to <code>true</code>.
-            </td>
-                        </tr>
-                        <tr id="tabindex" class="altColor">
-                            <td class="colFirst"><a href="#tabindex"><code>tabindex</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                The tab index to assign to the editor. If not given, no tab index will be assigned.
-            </td>
-                        </tr>
-                        <tr id="converter" class="rowColor">
-                            <td class="colFirst"><a href="#converter"><code>converter</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="converter" class="altColor">
+                            <td class="colFirst"><a href="#converter"><code>converter</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>javax.faces.convert.Converter</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 An EL expression or a literal text that defines a converter for the component. When it's an EL
                 expression, it's resolved to a converter instance. In case it's a static text, it must refer to a
                 converter id.
             </td>
                         </tr>
-                        <tr id="required" class="altColor">
-                            <td class="colFirst"><a href="#required"><code>required</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                Marks component as required.
-            </td>
-                        </tr>
-                        <tr id="originalRequired" class="rowColor">
-                            <td class="colFirst"><a href="#originalRequired"><code>originalRequired</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                Whether the original editor must have a value.
-            </td>
-                        </tr>
-                        <tr id="requiredMessage" class="altColor">
-                            <td class="colFirst"><a href="#requiredMessage"><code>requiredMessage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Message to display when required field validation fails.
-            </td>
-                        </tr>
                         <tr id="converterMessage" class="rowColor">
-                            <td class="colFirst"><a href="#converterMessage"><code>converterMessage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#converterMessage"><code>converterMessage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 Message to display when conversion fails.
             </td>
                         </tr>
-                        <tr id="validatorMessage" class="altColor">
-                            <td class="colFirst"><a href="#validatorMessage"><code>validatorMessage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Message to display when validation fails.
-            </td>
-                        </tr>
-                        <tr id="validator" class="rowColor">
-                            <td class="colFirst"><a href="#validator"><code>validator</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>javax.faces.validator.Validator</code>)
-					</td><td class="colLast">
-                A method expression referring to a method validating the input.
-            </td>
-                        </tr>
-                        <tr id="oninitialized" class="altColor">
-                            <td class="colFirst"><a href="#oninitialized"><code>oninitialized</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when the editor was rendered.
-            </td>
-                        </tr>
-                        <tr id="onfocus" class="rowColor">
-                            <td class="colFirst"><a href="#onfocus"><code>onfocus</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when the editor area receives focus.
-            </td>
-                        </tr>
-                        <tr id="onblur" class="altColor">
-                            <td class="colFirst"><a href="#onblur"><code>onblur</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when the editor area loses focus.
-            </td>
-                        </tr>
-                        <tr id="onchange" class="rowColor">
-                            <td class="colFirst"><a href="#onchange"><code>onchange</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when the editor content changes.
-            </td>
-                        </tr>
-                        <tr id="onpaste" class="altColor">
-                            <td class="colFirst"><a href="#onpaste"><code>onpaste</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when text was pasted into the editor.
-            </td>
-                        </tr>
-                        <tr id="onmousedown" class="rowColor">
-                            <td class="colFirst"><a href="#onmousedown"><code>onmousedown</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a mousedown event was triggered on the editor area.
-            </td>
-                        </tr>
-                        <tr id="onmousemove" class="altColor">
-                            <td class="colFirst"><a href="#onmousemove"><code>onmousemove</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a mousemove event was triggered on the editor area.
-            </td>
-                        </tr>
-                        <tr id="onmouseup" class="rowColor">
-                            <td class="colFirst"><a href="#onmouseup"><code>onmouseup</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a mouseup event was triggered on the editor area.
-            </td>
-                        </tr>
-                        <tr id="onkeyup" class="altColor">
-                            <td class="colFirst"><a href="#onkeyup"><code>onkeyup</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a keyup event was triggered on the editor area.
-            </td>
-                        </tr>
-                        <tr id="onkeydown" class="rowColor">
-                            <td class="colFirst"><a href="#onkeydown"><code>onkeydown</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a keydown event was triggered on the editor area.
-            </td>
-                        </tr>
-                        <tr id="onkeypress" class="altColor">
-                            <td class="colFirst"><a href="#onkeypress"><code>onkeypress</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a keypress (onDidType) event was triggered on the editor area.
-            </td>
-                        </tr>
-                        <tr id="onoriginalfocus" class="rowColor">
-                            <td class="colFirst"><a href="#onoriginalfocus"><code>onoriginalfocus</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when the original editor area receives focus.
-            </td>
-                        </tr>
-                        <tr id="onoriginalblur" class="altColor">
-                            <td class="colFirst"><a href="#onoriginalblur"><code>onoriginalblur</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when the original editor area loses focus.
-            </td>
-                        </tr>
-                        <tr id="onoriginalchange" class="rowColor">
-                            <td class="colFirst"><a href="#onoriginalchange"><code>onoriginalchange</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when the original editor content changes.
-            </td>
-                        </tr>
-                        <tr id="onoriginalpaste" class="altColor">
-                            <td class="colFirst"><a href="#onoriginalpaste"><code>onoriginalpaste</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when text was pasted into the original editor.
-            </td>
-                        </tr>
-                        <tr id="onoriginalmousedown" class="rowColor">
-                            <td class="colFirst"><a href="#onoriginalmousedown"><code>onoriginalmousedown</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a mousedown event was triggered on the original editor area.
-            </td>
-                        </tr>
-                        <tr id="onoriginalmousemove" class="altColor">
-                            <td class="colFirst"><a href="#onoriginalmousemove"><code>onoriginalmousemove</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a mousemove event was triggered on the original editor area.
-            </td>
-                        </tr>
-                        <tr id="onoriginalmouseup" class="rowColor">
-                            <td class="colFirst"><a href="#onoriginalmouseup"><code>onoriginalmouseup</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a mouseup event was triggered on the original editor area.
-            </td>
-                        </tr>
-                        <tr id="onoriginalkeyup" class="altColor">
-                            <td class="colFirst"><a href="#onoriginalkeyup"><code>onoriginalkeyup</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a keyup event was triggered on the original editor area.
-            </td>
-                        </tr>
-                        <tr id="onoriginalkeydown" class="rowColor">
-                            <td class="colFirst"><a href="#onoriginalkeydown"><code>onoriginalkeydown</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a keydown event was triggered on the original editor area.
-            </td>
-                        </tr>
-                        <tr id="onoriginalkeypress" class="altColor">
-                            <td class="colFirst"><a href="#onoriginalkeypress"><code>onoriginalkeypress</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Client side callback when a keypress (onDidType) event was triggered on the original editor area.
-            </td>
-                        </tr>
-                        <tr id="language" class="rowColor">
-                            <td class="colFirst"><a href="#language"><code>language</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Object</code>)
-					</td><td class="colLast">
-                The code language for the modified editor, such as <code>typescript</code> or <code>css</css>.
-                This is also the language for the original editor when <code>originalLanguage</code> is not specified. 
-                Defaults to <code>plaintext</code> when not specified. Can be either a string or one of the constants
-                defined in <code>org.primefaces.extensions.model.monacoeditor.ELanguage</code>.
-            </td>
-                        </tr>
-                        <tr id="originalLanguage" class="altColor">
-                            <td class="colFirst"><a href="#originalLanguage"><code>originalLanguage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Object</code>)
-					</td><td class="colLast">
-                The code language for the original editor, such as <code>typescript</code> or <code>css</css>.
-                Defaults to <code>language</code> when not specified. Can be either a string or one of the constants
-                defined in <code>org.primefaces.extensions.model.monacoeditor.ELanguage</code>.
-            </td>
-                        </tr>
-                        <tr id="customThemes" class="rowColor">
-                            <td class="colFirst"><a href="#customThemes"><code>customThemes</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="customThemes" class="altColor">
+                            <td class="colFirst"><a href="#customThemes"><code>customThemes</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Map</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 Allows you to register custom themes with the editor via Java. This must be a
                 <code>Map&lt;String, org.primefaces.extensions.model.monacoeditor.EditorStandaloneTheme&gt;</code>.
                 It maps between the name of the theme and the styling data for that theme. You can then specify the
                 theme name for the <code>theme</code> option in the <code>editorOptions</code>.
             </td>
                         </tr>
-                        <tr id="locale" class="altColor">
-                            <td class="colFirst"><a href="#locale"><code>locale</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Object</code>)
-					</td><td class="colLast">
-                Locale for the user interface. Can be either a <code>java.util.Locale</code> object or a string with the locale code.
-                Built-in languages are "cs", "de", "en", "es", "fr", "it", "ja", "ko", "pl", "pt_BR", "ru", "tr", "zh_CN", and "zh_TW".
-                To use a custom language or translation, you can specify a language file with custom translations via the option
-                <code>localeUrl</code>.
-            </td>
-                        </tr>
-                        <tr id="localeUrl" class="rowColor">
-                            <td class="colFirst"><a href="#localeUrl"><code>localeUrl</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="directory" class="rowColor">
+                            <td class="colFirst"><a href="#directory"><code>directory</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                For custom language files. If given, this is used instead of the built-in language files. This URL must
-                point to a JavaScript file that, when executed, adds the localization to
-                <code>window.MonacoEnvironment.Locale["LOCALE_CODE"]</code>, where <code>LOCALE_CODE</code> is the value you set
-                for <code>locale</code>. See the language file the widget downloads (when locale is not set to English) for an
-                example and all available messages that need to be translated.
+                    </td><td class="colLast">
+                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the directory (path) for that URI, with parts separated by slashes. If not given, it is taken from the client ID of this component.
+            </td>
+                        </tr>
+                        <tr id="disabled" class="altColor">
+                            <td class="colFirst"><a href="#disabled"><code>disabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+                    </td><td class="colLast">
+                Defines if the modified editor is disabled. This option does not accept a value to be submitted and
+                ensures the model values stays the same (server validation).
+            </td>
+                        </tr>
+                        <tr id="editorOptions" class="rowColor">
+                            <td class="colFirst"><a href="#editorOptions"><code>editorOptions</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>org.primefaces.extensions.model.monacoeditor.DiffEditorOptions</code>)
+                    </td><td class="colLast">
+                Options for the Monaco code editor. This is a simple wrapper around the JavaScript API, see
+                <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.ieditorconstructionoptions.html">IEditorConstructionOptions</a>
+                The code language can be set via the <code>EditorOptions#setLanguage</code> option.
             </td>
                         </tr>
                         <tr id="extender" class="altColor">
-                            <td class="colFirst"><a href="#extender"><code>extender</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#extender"><code>extender</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 
                 <p>An extender object to further customize the monaco editor via JavaScript. This can be either:</p>
                 <ul>
@@ -548,116 +248,309 @@
                 
             </td>
                         </tr>
-                        <tr id="scheme" class="rowColor">
-                            <td class="colFirst"><a href="#scheme"><code>scheme</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="extension" class="rowColor">
+                            <td class="colFirst"><a href="#extension"><code>extension</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the scheme (protocol) for that URI. Defaults to <code>inmemory</code>.
-            </td>
-                        </tr>
-                        <tr id="directory" class="altColor">
-                            <td class="colFirst"><a href="#directory"><code>directory</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the directory (path) for that URI, with parts separated by slashes. If not given, it is taken from the client ID of this component.
-            </td>
-                        </tr>
-                        <tr id="basename" class="rowColor">
-                            <td class="colFirst"><a href="#basename"><code>basename</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the basename for that URI, without the extension. If not given, default to 'file'.
-            </td>
-                        </tr>
-                        <tr id="extension" class="altColor">
-                            <td class="colFirst"><a href="#extension"><code>extension</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the extension for that URI, with or without the period. If not given, it is inferred from the (code) language.
             </td>
                         </tr>
-                        <tr id="originalScheme" class="rowColor">
-                            <td class="colFirst"><a href="#originalScheme"><code>originalScheme</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the scheme (protocol) for that URI of the original editor. Defaults to <code>inmemory</code>.
-            </td>
-                        </tr>
-                        <tr id="originalDirectory" class="altColor">
-                            <td class="colFirst"><a href="#originalDirectory"><code>originalDirectory</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the directory (path) for that URI of the original editor, with parts separated by slashes. If not given, it is taken from the client ID of this component.
-            </td>
-                        </tr>
-                        <tr id="originalBasename" class="rowColor">
-                            <td class="colFirst"><a href="#originalBasename"><code>originalBasename</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the basename for that URI of the original editor, without the extension. If not given, default to 'file'.
-            </td>
-                        </tr>
-                        <tr id="originalExtension" class="altColor">
-                            <td class="colFirst"><a href="#originalExtension"><code>originalExtension</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the extension for that URI of the original editor, with or without the period. If not given, it is inferred from the (code) language.
-            </td>
-                        </tr>
-                        <tr id="width" class="rowColor">
-                            <td class="colFirst"><a href="#width"><code>width</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Width of the editor with CSS units, set as an inline style. For example <code>500px</code> or <code>100%/code>. Set this to the empty string in case you want to size the editor via CSS.
-            </td>
-                        </tr>
                         <tr id="height" class="altColor">
-                            <td class="colFirst"><a href="#height"><code>height</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#height"><code>height</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 Height of the editor with CSS units, set as an inline style. For example <code>500px</code> or <code>100%/code>. Set this to the empty string in case you want to size the editor via CSS.
             </td>
                         </tr>
-                        <tr id="editorOptions" class="rowColor">
-                            <td class="colFirst"><a href="#editorOptions"><code>editorOptions</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>org.primefaces.extensions.model.monacoeditor.DiffEditorOptions</code>)
-					</td><td class="colLast">
-                Options for the Monaco code editor. This is a simple wrapper around the JavaScript API, see
-                <a href="https://microsoft.github.io/monaco-editor/api/interfaces/monaco.editor.ieditorconstructionoptions.html">IEditorConstructionOptions</a>
-                The code language can be set via the <code>EditorOptions#setLanguage</code> option.
-            </td>
-                        </tr>
-                        <tr id="autoResize" class="altColor">
-                            <td class="colFirst"><a href="#autoResize"><code>autoResize</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
-                                <br>
-                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
-					</td><td class="colLast">
-                If <code>true</code>, resizes the editor automatically when the iframe element changes its size.
-                Please note that this makes uses of the <a href="https://wicg.github.io/ResizeObserver/">new ResizeObserver API</a>
-                and <a href="https://caniuse.com/#feat=resizeobserver">works only in newer browers.</a> This widget checks whether
-                ResizeObserver API is available, and when it is not, no resizing is performed. To support resizing for older browsers,
-                search for a ResizeObserver polyfill. If you know when the size of the editor conainer could have changed, you can resize
-                the editor manually via <code>PF("editorWidgetVar").layout()</code>
-            </td>
-                        </tr>
-                        <tr id="overflowWidgetsDomNode" class="rowColor">
-                            <td class="colFirst"><a href="#overflowWidgetsDomNode"><code>overflowWidgetsDomNode</code></a></td><td class="colOne"><code>
-							false
-						</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="id" class="rowColor">
+                            <td class="colFirst"><a href="#id"><code>id</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
+                Unique identifier of the component in a naming container.
+            </td>
+                        </tr>
+                        <tr id="language" class="altColor">
+                            <td class="colFirst"><a href="#language"><code>language</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Object</code>)
+                    </td><td class="colLast">
+                The code language for the modified editor, such as <code>typescript</code> or <code>css</css>.
+                This is also the language for the original editor when <code>originalLanguage</code> is not specified. 
+                Defaults to <code>plaintext</code> when not specified. Can be either a string or one of the constants
+                defined in <code>org.primefaces.extensions.model.monacoeditor.ELanguage</code>.
+            </td>
+                        </tr>
+                        <tr id="locale" class="rowColor">
+                            <td class="colFirst"><a href="#locale"><code>locale</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Object</code>)
+                    </td><td class="colLast">
+                Locale for the user interface. Can be either a <code>java.util.Locale</code> object or a string with the locale code.
+                Built-in languages are "cs", "de", "en", "es", "fr", "it", "ja", "ko", "pl", "pt_BR", "ru", "tr", "zh_CN", and "zh_TW".
+                To use a custom language or translation, you can specify a language file with custom translations via the option
+                <code>localeUrl</code>.
+            </td>
+                        </tr>
+                        <tr id="localeUrl" class="altColor">
+                            <td class="colFirst"><a href="#localeUrl"><code>localeUrl</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                For custom language files. If given, this is used instead of the built-in language files. This URL must
+                point to a JavaScript file that, when executed, adds the localization to
+                <code>window.MonacoEnvironment.Locale["LOCALE_CODE"]</code>, where <code>LOCALE_CODE</code> is the value you set
+                for <code>locale</code>. See the language file the widget downloads (when locale is not set to English) for an
+                example and all available messages that need to be translated.
+            </td>
+                        </tr>
+                        <tr id="onblur" class="rowColor">
+                            <td class="colFirst"><a href="#onblur"><code>onblur</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when the editor area loses focus.
+            </td>
+                        </tr>
+                        <tr id="onchange" class="altColor">
+                            <td class="colFirst"><a href="#onchange"><code>onchange</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when the editor content changes.
+            </td>
+                        </tr>
+                        <tr id="onfocus" class="rowColor">
+                            <td class="colFirst"><a href="#onfocus"><code>onfocus</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when the editor area receives focus.
+            </td>
+                        </tr>
+                        <tr id="oninitialized" class="altColor">
+                            <td class="colFirst"><a href="#oninitialized"><code>oninitialized</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when the editor was rendered.
+            </td>
+                        </tr>
+                        <tr id="onkeydown" class="rowColor">
+                            <td class="colFirst"><a href="#onkeydown"><code>onkeydown</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a keydown event was triggered on the editor area.
+            </td>
+                        </tr>
+                        <tr id="onkeypress" class="altColor">
+                            <td class="colFirst"><a href="#onkeypress"><code>onkeypress</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a keypress (onDidType) event was triggered on the editor area.
+            </td>
+                        </tr>
+                        <tr id="onkeyup" class="rowColor">
+                            <td class="colFirst"><a href="#onkeyup"><code>onkeyup</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a keyup event was triggered on the editor area.
+            </td>
+                        </tr>
+                        <tr id="onmousedown" class="altColor">
+                            <td class="colFirst"><a href="#onmousedown"><code>onmousedown</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a mousedown event was triggered on the editor area.
+            </td>
+                        </tr>
+                        <tr id="onmousemove" class="rowColor">
+                            <td class="colFirst"><a href="#onmousemove"><code>onmousemove</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a mousemove event was triggered on the editor area.
+            </td>
+                        </tr>
+                        <tr id="onmouseup" class="altColor">
+                            <td class="colFirst"><a href="#onmouseup"><code>onmouseup</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a mouseup event was triggered on the editor area.
+            </td>
+                        </tr>
+                        <tr id="onoriginalblur" class="rowColor">
+                            <td class="colFirst"><a href="#onoriginalblur"><code>onoriginalblur</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when the original editor area loses focus.
+            </td>
+                        </tr>
+                        <tr id="onoriginalchange" class="altColor">
+                            <td class="colFirst"><a href="#onoriginalchange"><code>onoriginalchange</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when the original editor content changes.
+            </td>
+                        </tr>
+                        <tr id="onoriginalfocus" class="rowColor">
+                            <td class="colFirst"><a href="#onoriginalfocus"><code>onoriginalfocus</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when the original editor area receives focus.
+            </td>
+                        </tr>
+                        <tr id="onoriginalkeydown" class="altColor">
+                            <td class="colFirst"><a href="#onoriginalkeydown"><code>onoriginalkeydown</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a keydown event was triggered on the original editor area.
+            </td>
+                        </tr>
+                        <tr id="onoriginalkeypress" class="rowColor">
+                            <td class="colFirst"><a href="#onoriginalkeypress"><code>onoriginalkeypress</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a keypress (onDidType) event was triggered on the original editor area.
+            </td>
+                        </tr>
+                        <tr id="onoriginalkeyup" class="altColor">
+                            <td class="colFirst"><a href="#onoriginalkeyup"><code>onoriginalkeyup</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a keyup event was triggered on the original editor area.
+            </td>
+                        </tr>
+                        <tr id="onoriginalmousedown" class="rowColor">
+                            <td class="colFirst"><a href="#onoriginalmousedown"><code>onoriginalmousedown</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a mousedown event was triggered on the original editor area.
+            </td>
+                        </tr>
+                        <tr id="onoriginalmousemove" class="altColor">
+                            <td class="colFirst"><a href="#onoriginalmousemove"><code>onoriginalmousemove</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a mousemove event was triggered on the original editor area.
+            </td>
+                        </tr>
+                        <tr id="onoriginalmouseup" class="rowColor">
+                            <td class="colFirst"><a href="#onoriginalmouseup"><code>onoriginalmouseup</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when a mouseup event was triggered on the original editor area.
+            </td>
+                        </tr>
+                        <tr id="onoriginalpaste" class="altColor">
+                            <td class="colFirst"><a href="#onoriginalpaste"><code>onoriginalpaste</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when text was pasted into the original editor.
+            </td>
+                        </tr>
+                        <tr id="onpaste" class="rowColor">
+                            <td class="colFirst"><a href="#onpaste"><code>onpaste</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Client side callback when text was pasted into the editor.
+            </td>
+                        </tr>
+                        <tr id="originalBasename" class="altColor">
+                            <td class="colFirst"><a href="#originalBasename"><code>originalBasename</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the basename for that URI of the original editor, without the extension. If not given, default to 'file'.
+            </td>
+                        </tr>
+                        <tr id="originalDirectory" class="rowColor">
+                            <td class="colFirst"><a href="#originalDirectory"><code>originalDirectory</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the directory (path) for that URI of the original editor, with parts separated by slashes. If not given, it is taken from the client ID of this component.
+            </td>
+                        </tr>
+                        <tr id="originalDisabled" class="altColor">
+                            <td class="colFirst"><a href="#originalDisabled"><code>originalDisabled</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+                    </td><td class="colLast">
+                Defines if the original editor is disabled. This option does not accept a value to be submitted and
+                ensures the model values stays the same (server validation). Defaults to <code>true</code>.
+            </td>
+                        </tr>
+                        <tr id="originalExtension" class="rowColor">
+                            <td class="colFirst"><a href="#originalExtension"><code>originalExtension</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the extension for that URI of the original editor, with or without the period. If not given, it is inferred from the (code) language.
+            </td>
+                        </tr>
+                        <tr id="originalLanguage" class="altColor">
+                            <td class="colFirst"><a href="#originalLanguage"><code>originalLanguage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Object</code>)
+                    </td><td class="colLast">
+                The code language for the original editor, such as <code>typescript</code> or <code>css</css>.
+                Defaults to <code>language</code> when not specified. Can be either a string or one of the constants
+                defined in <code>org.primefaces.extensions.model.monacoeditor.ELanguage</code>.
+            </td>
+                        </tr>
+                        <tr id="originalReadonly" class="rowColor">
+                            <td class="colFirst"><a href="#originalReadonly"><code>originalReadonly</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+                    </td><td class="colLast">
+                Defines if the original editor is readonly. This option makes the UI not editable, but
+                still accepts values that are submitted (e.g. when the editor value was changed via JavaScript).
+                Use <code>originalDisabled</code> if submitted values should not be accepted. Defaults to
+                <code>false</code>.
+            </td>
+                        </tr>
+                        <tr id="originalRequired" class="altColor">
+                            <td class="colFirst"><a href="#originalRequired"><code>originalRequired</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+                    </td><td class="colLast">
+                Whether the original editor must have a value.
+            </td>
+                        </tr>
+                        <tr id="originalScheme" class="rowColor">
+                            <td class="colFirst"><a href="#originalScheme"><code>originalScheme</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the scheme (protocol) for that URI of the original editor. Defaults to <code>inmemory</code>.
+            </td>
+                        </tr>
+                        <tr id="overflowWidgetsDomNode" class="altColor">
+                            <td class="colFirst"><a href="#overflowWidgetsDomNode"><code>overflowWidgetsDomNode</code></a></td><td class="colOne"><code>
+                            false
+                        </code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
                 A PrimeFaces search expression of a component. Places overflow widgets inside an external
                 DOM node. Defaults to an internal DOM node when not given. May be useful when the editor is used
                 inside an element obscured by other components. You can, for example, append the overflow widget
@@ -667,6 +560,113 @@
                 appropriate CSS yourself. Note 3: As of monaco-editor 0.27.0, this option has several issues
                 with event handling, use at your own risk. This will most likely be fixed in a later version
                 of monaco-editor.
+            </td>
+                        </tr>
+                        <tr id="readonly" class="rowColor">
+                            <td class="colFirst"><a href="#readonly"><code>readonly</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+                    </td><td class="colLast">
+                Defines if the modified editor is readonly. This option makes the UI not editable, but still
+                accepts values that are submitted (e.g. when the editor value was changed via JavaScript). Use
+                <code>disabled</code> if submitted values should not be accepted.
+            </td>
+                        </tr>
+                        <tr id="rendered" class="altColor">
+                            <td class="colFirst"><a href="#rendered"><code>rendered</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+                    </td><td class="colLast">
+                Boolean value to specify the rendering of the component, when set to false component will not be rendered.
+            </td>
+                        </tr>
+                        <tr id="required" class="rowColor">
+                            <td class="colFirst"><a href="#required"><code>required</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.Boolean</code>)
+                    </td><td class="colLast">
+                Marks component as required.
+            </td>
+                        </tr>
+                        <tr id="requiredMessage" class="altColor">
+                            <td class="colFirst"><a href="#requiredMessage"><code>requiredMessage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Message to display when required field validation fails.
+            </td>
+                        </tr>
+                        <tr id="scheme" class="rowColor">
+                            <td class="colFirst"><a href="#scheme"><code>scheme</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                The monaco editor requires a unique URI for an opened model (i.e. the code currently being edited). This is the scheme (protocol) for that URI. Defaults to <code>inmemory</code>.
+            </td>
+                        </tr>
+                        <tr id="style" class="altColor">
+                            <td class="colFirst"><a href="#style"><code>style</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                CSS style(s) to be applied when this component is rendered.
+            </td>
+                        </tr>
+                        <tr id="styleClass" class="rowColor">
+                            <td class="colFirst"><a href="#styleClass"><code>styleClass</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Space-separated list of CSS style class(es) to be applied when this element is rendered.
+                This value is passed through as the "class" attribute to the generated markup.
+            </td>
+                        </tr>
+                        <tr id="tabindex" class="altColor">
+                            <td class="colFirst"><a href="#tabindex"><code>tabindex</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                The tab index to assign to the editor. If not given, no tab index will be assigned.
+            </td>
+                        </tr>
+                        <tr id="validator" class="rowColor">
+                            <td class="colFirst"><a href="#validator"><code>validator</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>javax.faces.validator.Validator</code>)
+                    </td><td class="colLast">
+                A method expression referring to a method validating the input.
+            </td>
+                        </tr>
+                        <tr id="validatorMessage" class="altColor">
+                            <td class="colFirst"><a href="#validatorMessage"><code>validatorMessage</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Message to display when validation fails.
+            </td>
+                        </tr>
+                        <tr id="value" class="rowColor">
+                            <td class="colFirst"><a href="#value"><code>value</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>org.primefaces.extensions.model.monacoeditor.MonacoDiffEditorModel</code>)
+                    </td><td class="colLast">
+                Value of the component. Must be a org.primefaces.extensions.model.monacoeditor.MonacoDiffEditorModel
+            </td>
+                        </tr>
+                        <tr id="widgetVar" class="altColor">
+                            <td class="colFirst"><a href="#widgetVar"><code>widgetVar</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Name of the client side widget.
+            </td>
+                        </tr>
+                        <tr id="width" class="rowColor">
+                            <td class="colFirst"><a href="#width"><code>width</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Width of the editor with CSS units, set as an inline style. For example <code>500px</code> or <code>100%/code>. Set this to the empty string in case you want to size the editor via CSS.
             </td>
                         </tr>
                     </tbody>
@@ -692,13 +692,13 @@
             <ul class="navList">
                 <li>
                     <a target="_bottom" href="../index.html?pe/monacoDiffEditor.html">
-									Frames
-								</a>
+                                    Frames
+                                </a>
                 </li>
                 <li>
                     <a target="_bottom" href="monacoDiffEditor.html">
-									No Frames
-								</a>
+                                    No Frames
+                                </a>
                 </li>
             </ul>
             <ul class="navList" id="alltags_navbar_bottom">
@@ -707,8 +707,8 @@
                 </li>
             </ul>
             <script type="text/javascript">
-							document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
-						</script><a name="skip-navbar_bottom"></a>
+                            document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
+                        </script><a name="skip-navbar_bottom"></a>
         </div>
         <p class="about">
             Output generated by <a href="http://vdldoc.omnifaces.org" target="_blank">Vdldoc</a> View Declaration Language Documentation Generator.

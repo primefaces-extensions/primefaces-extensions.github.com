@@ -3,7 +3,7 @@
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>selectDetailLevel (PrimeFaces Extensions VDL Documentation)
-			</title>
+            </title>
         <meta name="keywords" content="$title">
         <link rel="stylesheet" type="text/css" title="Style" href="../stylesheet.css">
     </head>
@@ -30,13 +30,13 @@
             <ul class="navList">
                 <li>
                     <a target="_top" href="../index.html?pe/selectDetailLevel.html">
-									Frames
-								</a>
+                                    Frames
+                                </a>
                 </li>
                 <li>
                     <a target="_top" href="selectDetailLevel.html">
-									No Frames
-								</a>
+                                    No Frames
+                                </a>
                 </li>
             </ul>
             <ul class="navList" id="alltags_navbar_top">
@@ -46,16 +46,16 @@
             </ul>
             <div>
                 <script type="text/javascript">
-								document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
-							</script>
+                                document.getElementById("alltags_navbar_top").style.display = (window == top) ? "block" : "none";
+                            </script>
             </div>
             <a name="skip-navbar_top"></a>
         </div>
         <div class="header">
             <h1 title="Library" class="title">pe</h1>
             <h2 class="title">
-							Tag
-							selectDetailLevel</h2>
+                            Tag
+                            selectDetailLevel</h2>
         </div>
         <div class="contentContainer">
             <div class="description">
@@ -84,59 +84,59 @@
                     </thead>
                     <tbody>
                         <tr id="contextValue" class="rowColor">
-                            <td class="colFirst"><a href="#contextValue"><code>contextValue</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#contextValue"><code>contextValue</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Object</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 Context value passing to the level to be navigated. Value defined here is accessible by contextVar in MasterDetailLevel. Default is none.
             </td>
                         </tr>
-                        <tr id="listener" class="altColor">
-                            <td class="colFirst"><a href="#listener"><code>listener</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="event" class="altColor">
+                            <td class="colFirst"><a href="#event"><code>event</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
-                                (<i>must evaluate to </i><code>javax.el.MethodExpression</code>)
-					</td><td class="colLast">
-                Listener method which is fired before action / actionListener of component, pe:selectDetailLevel is attached to, gets called. Return value of this listener is used as a new / modified contextValue. The listener allows to pass a new / modified contextValue between levels. Default is none.
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">
+                Name(s) of one or several accepted events of f:ajax / p:ajax in case when SelectDetailLevel is attached to any component with ajax behavior. Several events should be defined as space or comma separated list. If no events are specified, all events will be accepted.
             </td>
                         </tr>
                         <tr id="level" class="rowColor">
-                            <td class="colFirst"><a href="#level"><code>level</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#level"><code>level</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>java.lang.Integer</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 Level to go to. Default is none.
             </td>
                         </tr>
-                        <tr id="step" class="altColor">
-                            <td class="colFirst"><a href="#step"><code>step</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="listener" class="altColor">
+                            <td class="colFirst"><a href="#listener"><code>listener</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
-                                (<i>must evaluate to </i><code>java.lang.Integer</code>)
-					</td><td class="colLast">
-                Specifies how many steps to go. Can be negative. If level and step are not specified, then step = 1 is assumed. Default is none.
+                                (<i>must evaluate to </i><code>javax.el.MethodExpression</code>)
+                    </td><td class="colLast">
+                Listener method which is fired before action / actionListener of component, pe:selectDetailLevel is attached to, gets called. Return value of this listener is used as a new / modified contextValue. The listener allows to pass a new / modified contextValue between levels. Default is none.
             </td>
                         </tr>
                         <tr id="preserveInputs" class="rowColor">
-                            <td class="colFirst"><a href="#preserveInputs"><code>preserveInputs</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#preserveInputs"><code>preserveInputs</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>boolean</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 Specifies comma or blank separated list of clientIds of editable components whose inputs have to be preserved while levels get switched. @all is allowed and means all values within master detail have to be preserved. It makes sense e.g. if corresponding command component has "immediate"=true attribute. If nothing specified, input values gets cleared.
             </td>
                         </tr>
                         <tr id="resetInputs" class="altColor">
-                            <td class="colFirst"><a href="#resetInputs"><code>resetInputs</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                            <td class="colFirst"><a href="#resetInputs"><code>resetInputs</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
                                 (<i>must evaluate to </i><code>boolean</code>)
-					</td><td class="colLast">
+                    </td><td class="colLast">
                 Specifies comma or blank separated list of clientIds of editable components whose inputs have to be cleared while levels get switched. @all is allowed and means all values within master detail have to be cleared. It takes precedence over clientIds in preserveInputs.
             </td>
                         </tr>
-                        <tr id="event" class="rowColor">
-                            <td class="colFirst"><a href="#event"><code>event</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>javax.el.ValueExpression</code>
+                        <tr id="step" class="rowColor">
+                            <td class="colFirst"><a href="#step"><code>step</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
                                 <br>
-                                (<i>must evaluate to </i><code>java.lang.String</code>)
-					</td><td class="colLast">
-                Name(s) of one or several accepted events of f:ajax / p:ajax in case when SelectDetailLevel is attached to any component with ajax behavior. Several events should be defined as space or comma separated list. If no events are specified, all events will be accepted.
+                                (<i>must evaluate to </i><code>java.lang.Integer</code>)
+                    </td><td class="colLast">
+                Specifies how many steps to go. Can be negative. If level and step are not specified, then step = 1 is assumed. Default is none.
             </td>
                         </tr>
                     </tbody>
@@ -162,13 +162,13 @@
             <ul class="navList">
                 <li>
                     <a target="_bottom" href="../index.html?pe/selectDetailLevel.html">
-									Frames
-								</a>
+                                    Frames
+                                </a>
                 </li>
                 <li>
                     <a target="_bottom" href="selectDetailLevel.html">
-									No Frames
-								</a>
+                                    No Frames
+                                </a>
                 </li>
             </ul>
             <ul class="navList" id="alltags_navbar_bottom">
@@ -177,8 +177,8 @@
                 </li>
             </ul>
             <script type="text/javascript">
-							document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
-						</script><a name="skip-navbar_bottom"></a>
+                            document.getElementById("alltags_navbar_bottom").style.display = (window == top) ? "block" : "none";
+                        </script><a name="skip-navbar_bottom"></a>
         </div>
         <p class="about">
             Output generated by <a href="http://vdldoc.omnifaces.org" target="_blank">Vdldoc</a> View Declaration Language Documentation Generator.
