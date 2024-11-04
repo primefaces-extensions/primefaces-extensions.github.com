@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"org.primefaces.extensions.converter"},{"l":"org.primefaces.extensions.orgchart"}]
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.primefaces.extensions.converter"},{"l":"org.primefaces.extensions.orgchart"}];updateSearchResults();

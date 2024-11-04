@@ -1,259 +1,267 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <title>InputPhoneRenderer xref</title>
 <link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
 </head>
 <body>
 <div id="overview"><a href="../../../../../../apidocs/org/primefaces/extensions/component/inputphone/InputPhoneRenderer.html">View Javadoc</a></div><pre>
-<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <em class="jxr_javadoccomment"> * Copyright 2011-2019 PrimeFaces Extensions</em>
-<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_javadoccomment"> * Licensed under the Apache License, Version 2.0 (the "License");</em>
-<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_javadoccomment"> * you may not use this file except in compliance with the License.</em>
-<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_javadoccomment"> * You may obtain a copy of the License at</em>
-<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment"> * <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
-<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment"> * Unless required by applicable law or agreed to in writing, software</em>
-<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
-<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</em>
-<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> * See the License for the specific language governing permissions and</em>
-<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment"> * limitations under the License.</em>
-<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">package</strong> org.primefaces.extensions.component.inputphone;
-<a class="jxr_linenumber" name="L17" href="#L17">17</a>  
-<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> java.io.IOException;
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> java.util.Arrays;
-<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> java.util.Collection;
-<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
-<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
-<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> javax.faces.FacesException;
-<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">import</strong> javax.faces.component.UIComponent;
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">import</strong> javax.faces.context.FacesContext;
-<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <strong class="jxr_keyword">import</strong> javax.faces.context.ResponseWriter;
-<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">import</strong> javax.faces.convert.Converter;
-<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> javax.faces.convert.ConverterException;
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <em class="jxr_comment"> * Copyright (c) 2011-2024 PrimeFaces Extensions</em>
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_comment"> *  Permission is hereby granted, free of charge, to any person obtaining a copy</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_comment"> *  of this software and associated documentation files (the "Software"), to deal</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_comment"> *  in the Software without restriction, including without limitation the rights</em>
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_comment"> *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_comment"> *  copies of the Software, and to permit persons to whom the Software is</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_comment"> *  furnished to do so, subject to the following conditions:</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_comment"> *  The above copyright notice and this permission notice shall be included in</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_comment"> *  all copies or substantial portions of the Software.</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_comment"> *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_comment"> *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_comment"> *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_comment"> *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_comment"> *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <em class="jxr_comment"> *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <em class="jxr_comment"> *  THE SOFTWARE.</em>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">package</strong> org.primefaces.extensions.component.inputphone;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">import</strong> java.io.IOException;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">import</strong> java.util.Arrays;
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <strong class="jxr_keyword">import</strong> java.util.Collection;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">import</strong> java.util.Map;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> java.util.logging.Logger;
 <a class="jxr_linenumber" name="L29" href="#L29">29</a>  
-<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">import</strong> org.apache.commons.lang3.StringUtils;
-<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <strong class="jxr_keyword">import</strong> org.primefaces.component.inputtext.InputText;
-<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <strong class="jxr_keyword">import</strong> org.primefaces.renderkit.InputRenderer;
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">import</strong> org.primefaces.shaded.json.JSONArray;
-<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <strong class="jxr_keyword">import</strong> org.primefaces.util.ComponentUtils;
-<a class="jxr_linenumber" name="L35" href="#L35">35</a>  <strong class="jxr_keyword">import</strong> org.primefaces.util.Constants;
-<a class="jxr_linenumber" name="L36" href="#L36">36</a>  <strong class="jxr_keyword">import</strong> org.primefaces.util.HTML;
-<a class="jxr_linenumber" name="L37" href="#L37">37</a>  <strong class="jxr_keyword">import</strong> org.primefaces.util.LangUtils;
-<a class="jxr_linenumber" name="L38" href="#L38">38</a>  <strong class="jxr_keyword">import</strong> org.primefaces.util.WidgetBuilder;
-<a class="jxr_linenumber" name="L39" href="#L39">39</a>  
-<a class="jxr_linenumber" name="L40" href="#L40">40</a>  <strong class="jxr_keyword">import</strong> org.primefaces.extensions.config.PrimeExtensionsEnvironment;
-<a class="jxr_linenumber" name="L41" href="#L41">41</a>  <strong class="jxr_keyword">import</strong> org.primefaces.extensions.util.PhoneNumberUtilWrapper;
-<a class="jxr_linenumber" name="L42" href="#L42">42</a>  
-<a class="jxr_linenumber" name="L43" href="#L43">43</a>  <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L44" href="#L44">44</a>  <em class="jxr_javadoccomment"> * Renderer for the {@link InputPhone} component.</em>
-<a class="jxr_linenumber" name="L45" href="#L45">45</a>  <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="L46" href="#L46">46</a>  <em class="jxr_javadoccomment"> * @author Jasper de Vries &amp;lt;jepsar@gmail.com&amp;gt;</em>
-<a class="jxr_linenumber" name="L47" href="#L47">47</a>  <em class="jxr_javadoccomment"> * @since 7.0</em>
-<a class="jxr_linenumber" name="L48" href="#L48">48</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="L49" href="#L49">49</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="InputPhoneRenderer" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhoneRenderer.html#InputPhoneRenderer">InputPhoneRenderer</a> <strong class="jxr_keyword">extends</strong> InputRenderer {
-<a class="jxr_linenumber" name="L50" href="#L50">50</a>  
-<a class="jxr_linenumber" name="L51" href="#L51">51</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger LOGGER = Logger.getLogger(InputPhoneRenderer.<strong class="jxr_keyword">class</strong>.getName());
-<a class="jxr_linenumber" name="L52" href="#L52">52</a>  
-<a class="jxr_linenumber" name="L53" href="#L53">53</a>      @Override
-<a class="jxr_linenumber" name="L54" href="#L54">54</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> decode(FacesContext context, UIComponent component) {
-<a class="jxr_linenumber" name="L55" href="#L55">55</a>          <strong class="jxr_keyword">final</strong> InputPhone inputPhone = (InputPhone) component;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">import</strong> javax.faces.FacesException;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <strong class="jxr_keyword">import</strong> javax.faces.component.UIComponent;
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <strong class="jxr_keyword">import</strong> javax.faces.context.FacesContext;
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">import</strong> javax.faces.context.ResponseWriter;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <strong class="jxr_keyword">import</strong> javax.faces.convert.Converter;
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  <strong class="jxr_keyword">import</strong> org.primefaces.component.inputtext.InputText;
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  <strong class="jxr_keyword">import</strong> org.primefaces.extensions.config.PrimeExtensionsEnvironment;
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  <strong class="jxr_keyword">import</strong> org.primefaces.extensions.util.Attrs;
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  <strong class="jxr_keyword">import</strong> org.primefaces.extensions.util.PhoneNumberUtilWrapper;
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  <strong class="jxr_keyword">import</strong> org.primefaces.renderkit.InputRenderer;
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  <strong class="jxr_keyword">import</strong> org.primefaces.shaded.json.JSONArray;
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  <strong class="jxr_keyword">import</strong> org.primefaces.shaded.json.JSONObject;
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  <strong class="jxr_keyword">import</strong> org.primefaces.util.ComponentUtils;
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  <strong class="jxr_keyword">import</strong> org.primefaces.util.Constants;
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  <strong class="jxr_keyword">import</strong> org.primefaces.util.HTML;
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  <strong class="jxr_keyword">import</strong> org.primefaces.util.LangUtils;
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  <strong class="jxr_keyword">import</strong> org.primefaces.util.WidgetBuilder;
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  <em class="jxr_javadoccomment"> * Renderer for the {@link InputPhone} component.</em>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>  <em class="jxr_javadoccomment"> * @author Jasper de Vries &amp;lt;jepsar@gmail.com&amp;gt;</em>
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  <em class="jxr_javadoccomment"> * @since 7.0</em>
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="InputPhoneRenderer" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhoneRenderer.html#InputPhoneRenderer">InputPhoneRenderer</a> <strong class="jxr_keyword">extends</strong> InputRenderer {
 <a class="jxr_linenumber" name="L56" href="#L56">56</a>  
-<a class="jxr_linenumber" name="L57" href="#L57">57</a>          <strong class="jxr_keyword">if</strong> (!shouldDecode(inputPhone)) {
-<a class="jxr_linenumber" name="L58" href="#L58">58</a>              <strong class="jxr_keyword">return</strong>;
-<a class="jxr_linenumber" name="L59" href="#L59">59</a>          }
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger LOGGER = Logger.getLogger(InputPhoneRenderer.<strong class="jxr_keyword">class</strong>.getName());
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String HIDDEN_ID = <span class="jxr_string">"_hidden"</span>;
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String ISO2_ID = <span class="jxr_string">"_iso2"</span>;
 <a class="jxr_linenumber" name="L60" href="#L60">60</a>  
-<a class="jxr_linenumber" name="L61" href="#L61">61</a>          decodeBehaviors(context, inputPhone);
-<a class="jxr_linenumber" name="L62" href="#L62">62</a>  
-<a class="jxr_linenumber" name="L63" href="#L63">63</a>          <strong class="jxr_keyword">final</strong> String inputId = inputPhone.getClientId(context) + <span class="jxr_string">"_input"</span>;
-<a class="jxr_linenumber" name="L64" href="#L64">64</a>          <strong class="jxr_keyword">final</strong> String submittedValue = context.getExternalContext().getRequestParameterMap().get(inputId);
-<a class="jxr_linenumber" name="L65" href="#L65">65</a>  
-<a class="jxr_linenumber" name="L66" href="#L66">66</a>          <strong class="jxr_keyword">if</strong> (submittedValue != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="L67" href="#L67">67</a>              inputPhone.setSubmittedValue(submittedValue);
-<a class="jxr_linenumber" name="L68" href="#L68">68</a>          }
-<a class="jxr_linenumber" name="L69" href="#L69">69</a>      }
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      @Override
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> decode(<strong class="jxr_keyword">final</strong> FacesContext context, <strong class="jxr_keyword">final</strong> UIComponent component) {
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          <strong class="jxr_keyword">final</strong> <a name="InputPhone" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhone.html#InputPhone">InputPhone</a> inputPhone = (<a name="InputPhone" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhone.html#InputPhone">InputPhone</a>) component;
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          <strong class="jxr_keyword">if</strong> (!shouldDecode(inputPhone)) {
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>              <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          }
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          decodeBehaviors(context, inputPhone);
 <a class="jxr_linenumber" name="L70" href="#L70">70</a>  
-<a class="jxr_linenumber" name="L71" href="#L71">71</a>      @Override
-<a class="jxr_linenumber" name="L72" href="#L72">72</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> encodeEnd(FacesContext context, UIComponent component) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="L73" href="#L73">73</a>          <strong class="jxr_keyword">final</strong> InputPhone inputPhone = (InputPhone) component;
-<a class="jxr_linenumber" name="L74" href="#L74">74</a>  
-<a class="jxr_linenumber" name="L75" href="#L75">75</a>          <strong class="jxr_keyword">final</strong> Object value = inputPhone.getValue();
-<a class="jxr_linenumber" name="L76" href="#L76">76</a>          String valueToRender = ComponentUtils.getValueToRender(context, inputPhone, value);
-<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <strong class="jxr_keyword">if</strong> (valueToRender == <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="L78" href="#L78">78</a>              valueToRender = Constants.EMPTY_STRING;
-<a class="jxr_linenumber" name="L79" href="#L79">79</a>          }
-<a class="jxr_linenumber" name="L80" href="#L80">80</a>  
-<a class="jxr_linenumber" name="L81" href="#L81">81</a>          encodeMarkup(context, inputPhone, valueToRender);
-<a class="jxr_linenumber" name="L82" href="#L82">82</a>          encodeScript(context, inputPhone);
-<a class="jxr_linenumber" name="L83" href="#L83">83</a>      }
-<a class="jxr_linenumber" name="L84" href="#L84">84</a>  
-<a class="jxr_linenumber" name="L85" href="#L85">85</a>      @Override
-<a class="jxr_linenumber" name="L86" href="#L86">86</a>      <strong class="jxr_keyword">public</strong> Object getConvertedValue(FacesContext context, UIComponent component, Object submittedValue) <strong class="jxr_keyword">throws</strong> ConverterException {
-<a class="jxr_linenumber" name="L87" href="#L87">87</a>          <strong class="jxr_keyword">final</strong> String value = (String) submittedValue;
-<a class="jxr_linenumber" name="L88" href="#L88">88</a>          <strong class="jxr_keyword">if</strong> (LangUtils.isValueBlank(value)) {
-<a class="jxr_linenumber" name="L89" href="#L89">89</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
-<a class="jxr_linenumber" name="L90" href="#L90">90</a>          }
-<a class="jxr_linenumber" name="L91" href="#L91">91</a>  
-<a class="jxr_linenumber" name="L92" href="#L92">92</a>          <strong class="jxr_keyword">final</strong> InputPhone inputPhone = (InputPhone) component;
-<a class="jxr_linenumber" name="L93" href="#L93">93</a>          <strong class="jxr_keyword">final</strong> Converter converter = inputPhone.getConverter();
-<a class="jxr_linenumber" name="L94" href="#L94">94</a>  
-<a class="jxr_linenumber" name="L95" href="#L95">95</a>          <strong class="jxr_keyword">if</strong> (converter != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="L96" href="#L96">96</a>              <strong class="jxr_keyword">return</strong> converter.getAsObject(context, inputPhone, value);
-<a class="jxr_linenumber" name="L97" href="#L97">97</a>          }
-<a class="jxr_linenumber" name="L98" href="#L98">98</a>  
-<a class="jxr_linenumber" name="L99" href="#L99">99</a>          String country = context.getExternalContext().getRequestParameterMap().get(inputPhone.getClientId() + <span class="jxr_string">"_iso2"</span>);
-<a class="jxr_linenumber" name="L100" href="#L100">100</a>         <strong class="jxr_keyword">if</strong> (country == <strong class="jxr_keyword">null</strong> || InputPhone.COUNTRY_AUTO.equals(country)) {
-<a class="jxr_linenumber" name="L101" href="#L101">101</a>             country = Constants.EMPTY_STRING;
-<a class="jxr_linenumber" name="L102" href="#L102">102</a>         }
-<a class="jxr_linenumber" name="L103" href="#L103">103</a>         <strong class="jxr_keyword">if</strong> (PrimeExtensionsEnvironment.getCurrentInstance(context).isLibphonenumberAvailable()) {
-<a class="jxr_linenumber" name="L104" href="#L104">104</a>             PhoneNumberUtilWrapper.validate(value, country.toUpperCase());
-<a class="jxr_linenumber" name="L105" href="#L105">105</a>         }
-<a class="jxr_linenumber" name="L106" href="#L106">106</a>         <strong class="jxr_keyword">else</strong> {
-<a class="jxr_linenumber" name="L107" href="#L107">107</a>             LOGGER.warning(<span class="jxr_string">"Libphonenumber not available, unable to validate!"</span>);
-<a class="jxr_linenumber" name="L108" href="#L108">108</a>         }
-<a class="jxr_linenumber" name="L109" href="#L109">109</a>         <strong class="jxr_keyword">return</strong> value;
-<a class="jxr_linenumber" name="L110" href="#L110">110</a>     }
-<a class="jxr_linenumber" name="L111" href="#L111">111</a> 
-<a class="jxr_linenumber" name="L112" href="#L112">112</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> encodeMarkup(FacesContext context, InputPhone inputPhone, String valueToRender) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="L113" href="#L113">113</a>         <strong class="jxr_keyword">final</strong> ResponseWriter writer = context.getResponseWriter();
-<a class="jxr_linenumber" name="L114" href="#L114">114</a>         <strong class="jxr_keyword">final</strong> String clientId = inputPhone.getClientId(context);
-<a class="jxr_linenumber" name="L115" href="#L115">115</a> 
-<a class="jxr_linenumber" name="L116" href="#L116">116</a>         String styleClass = inputPhone.getStyleClass();
-<a class="jxr_linenumber" name="L117" href="#L117">117</a>         styleClass = styleClass == <strong class="jxr_keyword">null</strong> ? InputPhone.STYLE_CLASS : InputPhone.STYLE_CLASS + <span class="jxr_string">" "</span> + styleClass;
-<a class="jxr_linenumber" name="L118" href="#L118">118</a> 
-<a class="jxr_linenumber" name="L119" href="#L119">119</a>         writer.startElement(<span class="jxr_string">"span"</span>, inputPhone);
-<a class="jxr_linenumber" name="L120" href="#L120">120</a>         writer.writeAttribute(<span class="jxr_string">"id"</span>, clientId, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L121" href="#L121">121</a>         writer.writeAttribute(<span class="jxr_string">"class"</span>, styleClass, <span class="jxr_string">"styleClass"</span>);
-<a class="jxr_linenumber" name="L122" href="#L122">122</a> 
-<a class="jxr_linenumber" name="L123" href="#L123">123</a>         <strong class="jxr_keyword">if</strong> (inputPhone.getStyle() != <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="L124" href="#L124">124</a>             writer.writeAttribute(<span class="jxr_string">"style"</span>, inputPhone.getStyle(), <span class="jxr_string">"style"</span>);
-<a class="jxr_linenumber" name="L125" href="#L125">125</a>         }
-<a class="jxr_linenumber" name="L126" href="#L126">126</a> 
-<a class="jxr_linenumber" name="L127" href="#L127">127</a>         encodeInput(context, inputPhone, clientId, valueToRender);
-<a class="jxr_linenumber" name="L128" href="#L128">128</a>         encodeHiddenInput(context, inputPhone, clientId);
-<a class="jxr_linenumber" name="L129" href="#L129">129</a> 
-<a class="jxr_linenumber" name="L130" href="#L130">130</a>         writer.endElement(<span class="jxr_string">"span"</span>);
-<a class="jxr_linenumber" name="L131" href="#L131">131</a>     }
-<a class="jxr_linenumber" name="L132" href="#L132">132</a> 
-<a class="jxr_linenumber" name="L133" href="#L133">133</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> encodeInput(FacesContext context, InputPhone inputPhone, String clientId, String valueToRender)
-<a class="jxr_linenumber" name="L134" href="#L134">134</a>                 <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="L135" href="#L135">135</a> 
-<a class="jxr_linenumber" name="L136" href="#L136">136</a>         <strong class="jxr_keyword">final</strong> ResponseWriter writer = context.getResponseWriter();
-<a class="jxr_linenumber" name="L137" href="#L137">137</a>         <strong class="jxr_keyword">final</strong> String inputId = clientId + <span class="jxr_string">"_input"</span>;
-<a class="jxr_linenumber" name="L138" href="#L138">138</a> 
-<a class="jxr_linenumber" name="L139" href="#L139">139</a>         <strong class="jxr_keyword">final</strong> String inputStyle = inputPhone.getInputStyle();
-<a class="jxr_linenumber" name="L140" href="#L140">140</a>         <strong class="jxr_keyword">final</strong> String inputStyleClass = inputPhone.getInputStyleClass();
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>          <strong class="jxr_keyword">final</strong> String inputId = inputPhone.getClientId(context) + HIDDEN_ID;
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          <strong class="jxr_keyword">final</strong> String submittedValue = context.getExternalContext().getRequestParameterMap().get(inputId);
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>  
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          <strong class="jxr_keyword">if</strong> (submittedValue != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>              inputPhone.setSubmittedValue(submittedValue);
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          }
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>      }
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>  
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>      @Override
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> encodeEnd(<strong class="jxr_keyword">final</strong> FacesContext context, <strong class="jxr_keyword">final</strong> UIComponent component) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          <strong class="jxr_keyword">final</strong> <a name="InputPhone" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhone.html#InputPhone">InputPhone</a> inputPhone = (<a name="InputPhone" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhone.html#InputPhone">InputPhone</a>) component;
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>  
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          <strong class="jxr_keyword">final</strong> Object value = inputPhone.getValue();
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          String valueToRender = ComponentUtils.getValueToRender(context, inputPhone, value);
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          <strong class="jxr_keyword">if</strong> (valueToRender == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>              valueToRender = Constants.EMPTY_STRING;
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          }
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>  
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          encodeMarkup(context, inputPhone, valueToRender);
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          encodeScript(context, inputPhone);
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>      }
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>  
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>      @Override
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>      <strong class="jxr_keyword">public</strong> Object getConvertedValue(<strong class="jxr_keyword">final</strong> FacesContext context, <strong class="jxr_keyword">final</strong> UIComponent component,
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>                  <strong class="jxr_keyword">final</strong> Object submittedValue) {
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>          <strong class="jxr_keyword">final</strong> String value = (String) submittedValue;
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>          <strong class="jxr_keyword">if</strong> (LangUtils.isBlank(value)) {
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>          }
+<a class="jxr_linenumber" name="L100" href="#L100">100</a> 
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>         <strong class="jxr_keyword">final</strong> <a name="InputPhone" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhone.html#InputPhone">InputPhone</a> inputPhone = (<a name="InputPhone" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhone.html#InputPhone">InputPhone</a>) component;
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         <strong class="jxr_keyword">final</strong> Converter&lt;?&gt; converter = inputPhone.getConverter();
+<a class="jxr_linenumber" name="L103" href="#L103">103</a> 
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>         <strong class="jxr_keyword">if</strong> (converter != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>             <strong class="jxr_keyword">return</strong> converter.getAsObject(context, inputPhone, value);
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         }
+<a class="jxr_linenumber" name="L107" href="#L107">107</a> 
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         String country = context.getExternalContext().getRequestParameterMap()
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>                     .get(inputPhone.getClientId() + ISO2_ID);
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         <strong class="jxr_keyword">if</strong> (country == <strong class="jxr_keyword">null</strong> || InputPhone.COUNTRY_AUTO.equals(country)) {
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>             country = Constants.EMPTY_STRING;
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>         }
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>         <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>             inputPhone.setInitialCountry(country);
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>         }
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         <strong class="jxr_keyword">if</strong> (PrimeExtensionsEnvironment.getCurrentInstance(context).isLibphonenumberAvailable()) {
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>             PhoneNumberUtilWrapper.validate(value, country.toUpperCase(), inputPhone.getValidatorMessage());
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>         }
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>         <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>             LOGGER.warning(<span class="jxr_string">"Libphonenumber not available, unable to validate!"</span>);
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>         }
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         <strong class="jxr_keyword">return</strong> value;
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>     }
+<a class="jxr_linenumber" name="L124" href="#L124">124</a> 
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> encodeMarkup(<strong class="jxr_keyword">final</strong> FacesContext context, <strong class="jxr_keyword">final</strong> <a name="InputPhone" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhone.html#InputPhone">InputPhone</a> inputPhone, <strong class="jxr_keyword">final</strong> String valueToRender)
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>                 <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>         <strong class="jxr_keyword">final</strong> ResponseWriter writer = context.getResponseWriter();
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>         <strong class="jxr_keyword">final</strong> String clientId = inputPhone.getClientId(context);
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>         <strong class="jxr_keyword">final</strong> String styleClass = getStyleClassBuilder(context)
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>                     .add(InputPhone.STYLE_CLASS)
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>                     .add(inputPhone.getStyleClass())
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>                     .build();
+<a class="jxr_linenumber" name="L133" href="#L133">133</a> 
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         writer.startElement(<span class="jxr_string">"span"</span>, inputPhone);
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>         writer.writeAttribute(<span class="jxr_string">"id"</span>, clientId, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>         writer.writeAttribute(Attrs.CLASS, styleClass, <span class="jxr_string">"styleClass"</span>);
+<a class="jxr_linenumber" name="L137" href="#L137">137</a> 
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>         <strong class="jxr_keyword">if</strong> (inputPhone.getStyle() != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>             writer.writeAttribute(Attrs.STYLE, inputPhone.getStyle(), Attrs.STYLE);
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>         }
 <a class="jxr_linenumber" name="L141" href="#L141">141</a> 
-<a class="jxr_linenumber" name="L142" href="#L142">142</a>         String styleClass = InputText.STYLE_CLASS;
-<a class="jxr_linenumber" name="L143" href="#L143">143</a>         styleClass = inputPhone.isValid() ? styleClass : styleClass + <span class="jxr_string">" ui-state-error"</span>;
-<a class="jxr_linenumber" name="L144" href="#L144">144</a>         styleClass = !inputPhone.isDisabled() ? styleClass : styleClass + <span class="jxr_string">" ui-state-disabled"</span>;
-<a class="jxr_linenumber" name="L145" href="#L145">145</a>         <strong class="jxr_keyword">if</strong> (!isValueBlank(inputStyleClass)) {
-<a class="jxr_linenumber" name="L146" href="#L146">146</a>             styleClass += <span class="jxr_string">" "</span> + inputStyleClass;
-<a class="jxr_linenumber" name="L147" href="#L147">147</a>         }
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>         renderRTLDirection(context, inputPhone);
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         encodeInput(context, inputPhone, clientId, valueToRender);
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>         encodeHiddenInputs(context, inputPhone, clientId, valueToRender);
+<a class="jxr_linenumber" name="L145" href="#L145">145</a> 
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>         writer.endElement(<span class="jxr_string">"span"</span>);
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>     }
 <a class="jxr_linenumber" name="L148" href="#L148">148</a> 
-<a class="jxr_linenumber" name="L149" href="#L149">149</a>         writer.startElement(<span class="jxr_string">"input"</span>, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L150" href="#L150">150</a>         writer.writeAttribute(<span class="jxr_string">"id"</span>, inputId, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L151" href="#L151">151</a>         writer.writeAttribute(<span class="jxr_string">"name"</span>, inputId, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L152" href="#L152">152</a>         writer.writeAttribute(<span class="jxr_string">"type"</span>, inputPhone.getType(), <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L153" href="#L153">153</a>         writer.writeAttribute(<span class="jxr_string">"value"</span>, valueToRender, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L154" href="#L154">154</a> 
-<a class="jxr_linenumber" name="L155" href="#L155">155</a>         <strong class="jxr_keyword">if</strong> (!isValueBlank(inputStyle)) {
-<a class="jxr_linenumber" name="L156" href="#L156">156</a>             writer.writeAttribute(<span class="jxr_string">"style"</span>, inputStyle, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L157" href="#L157">157</a>         }
-<a class="jxr_linenumber" name="L158" href="#L158">158</a> 
-<a class="jxr_linenumber" name="L159" href="#L159">159</a>         writer.writeAttribute(<span class="jxr_string">"class"</span>, styleClass, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L160" href="#L160">160</a> 
-<a class="jxr_linenumber" name="L161" href="#L161">161</a>         renderAccessibilityAttributes(context, inputPhone);
-<a class="jxr_linenumber" name="L162" href="#L162">162</a>         renderPassThruAttributes(context, inputPhone, HTML.INPUT_TEXT_ATTRS_WITHOUT_EVENTS);
-<a class="jxr_linenumber" name="L163" href="#L163">163</a>         renderDomEvents(context, inputPhone, HTML.INPUT_TEXT_EVENTS);
-<a class="jxr_linenumber" name="L164" href="#L164">164</a>         renderValidationMetadata(context, inputPhone);
-<a class="jxr_linenumber" name="L165" href="#L165">165</a> 
-<a class="jxr_linenumber" name="L166" href="#L166">166</a>         writer.endElement(<span class="jxr_string">"input"</span>);
-<a class="jxr_linenumber" name="L167" href="#L167">167</a>     }
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> encodeInput(<strong class="jxr_keyword">final</strong> FacesContext context, <strong class="jxr_keyword">final</strong> <a name="InputPhone" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhone.html#InputPhone">InputPhone</a> inputPhone, <strong class="jxr_keyword">final</strong> String clientId,
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>                 <strong class="jxr_keyword">final</strong> String valueToRender)
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>                 <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="L152" href="#L152">152</a> 
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>         <strong class="jxr_keyword">final</strong> ResponseWriter writer = context.getResponseWriter();
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         <strong class="jxr_keyword">final</strong> String inputId = clientId + InputPhone.INPUT_SUFFIX;
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>         <strong class="jxr_keyword">final</strong> String inputStyle = inputPhone.getInputStyle();
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         <strong class="jxr_keyword">final</strong> String styleClass = createStyleClass(inputPhone, <span class="jxr_string">"inputStyleClass"</span>, InputText.STYLE_CLASS);
+<a class="jxr_linenumber" name="L157" href="#L157">157</a> 
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         writer.startElement(<span class="jxr_string">"input"</span>, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>         writer.writeAttribute(<span class="jxr_string">"id"</span>, inputId, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>         writer.writeAttribute(<span class="jxr_string">"name"</span>, inputId, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>         writer.writeAttribute(<span class="jxr_string">"type"</span>, inputPhone.getType(), <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>         writer.writeAttribute(<span class="jxr_string">"value"</span>, valueToRender, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>         writer.writeAttribute(Attrs.CLASS, styleClass, <span class="jxr_string">"inputStyleClass"</span>);
+<a class="jxr_linenumber" name="L164" href="#L164">164</a> 
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>         <strong class="jxr_keyword">if</strong> (!isValueBlank(inputStyle)) {
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>             writer.writeAttribute(Attrs.STYLE, inputStyle, <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>         }
 <a class="jxr_linenumber" name="L168" href="#L168">168</a> 
-<a class="jxr_linenumber" name="L169" href="#L169">169</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> encodeHiddenInput(FacesContext context, InputPhone inputPhone, String clientId)
-<a class="jxr_linenumber" name="L170" href="#L170">170</a>                 <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="L171" href="#L171">171</a>         <strong class="jxr_keyword">final</strong> ResponseWriter writer = context.getResponseWriter();
-<a class="jxr_linenumber" name="L172" href="#L172">172</a>         writer.startElement(<span class="jxr_string">"input"</span>, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L173" href="#L173">173</a>         writer.writeAttribute(<span class="jxr_string">"type"</span>, <span class="jxr_string">"hidden"</span>, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L174" href="#L174">174</a>         writer.writeAttribute(<span class="jxr_string">"id"</span>, clientId + <span class="jxr_string">"_iso2"</span>, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L175" href="#L175">175</a>         writer.writeAttribute(<span class="jxr_string">"name"</span>, clientId + <span class="jxr_string">"_iso2"</span>, <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L176" href="#L176">176</a>         writer.writeAttribute(<span class="jxr_string">"value"</span>, inputPhone.getInitialCountry(), <strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L177" href="#L177">177</a>         writer.endElement(<span class="jxr_string">"input"</span>);
-<a class="jxr_linenumber" name="L178" href="#L178">178</a>     }
-<a class="jxr_linenumber" name="L179" href="#L179">179</a> 
-<a class="jxr_linenumber" name="L180" href="#L180">180</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> encodeScript(FacesContext context, InputPhone inputPhone) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="L181" href="#L181">181</a>         <strong class="jxr_keyword">final</strong> String clientId = inputPhone.getClientId(context);
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>         renderAccessibilityAttributes(context, inputPhone);
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>         renderPassThruAttributes(context, inputPhone, HTML.INPUT_TEXT_ATTRS_WITHOUT_EVENTS);
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         renderDomEvents(context, inputPhone, HTML.INPUT_TEXT_EVENTS);
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>         renderValidationMetadata(context, inputPhone);
+<a class="jxr_linenumber" name="L173" href="#L173">173</a> 
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>         writer.endElement(<span class="jxr_string">"input"</span>);
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>     }
+<a class="jxr_linenumber" name="L176" href="#L176">176</a> 
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> encodeHiddenInputs(<strong class="jxr_keyword">final</strong> FacesContext context, <strong class="jxr_keyword">final</strong> <a name="InputPhone" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhone.html#InputPhone">InputPhone</a> inputPhone, <strong class="jxr_keyword">final</strong> String clientId, <strong class="jxr_keyword">final</strong> String valueToRender)
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>                 <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>         renderHiddenInput(context, clientId + ISO2_ID, inputPhone.getInitialCountry(), inputPhone.isDisabled());
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>         renderHiddenInput(context, clientId + HIDDEN_ID, valueToRender, inputPhone.isDisabled());
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>     }
 <a class="jxr_linenumber" name="L182" href="#L182">182</a> 
-<a class="jxr_linenumber" name="L183" href="#L183">183</a>         <strong class="jxr_keyword">final</strong> WidgetBuilder wb = getWidgetBuilder(context);
-<a class="jxr_linenumber" name="L184" href="#L184">184</a>         wb.init(<span class="jxr_string">"ExtInputPhone"</span>, inputPhone.resolveWidgetVar(), clientId);
-<a class="jxr_linenumber" name="L185" href="#L185">185</a>         <strong class="jxr_keyword">if</strong> (!inputPhone.isAllowDropdown()) {
-<a class="jxr_linenumber" name="L186" href="#L186">186</a>             wb.attr(<span class="jxr_string">"allowDropdown"</span>, inputPhone.isAllowDropdown());
-<a class="jxr_linenumber" name="L187" href="#L187">187</a>         }
-<a class="jxr_linenumber" name="L188" href="#L188">188</a>         <strong class="jxr_keyword">if</strong> (!inputPhone.isAutoHideDialCode()) {
-<a class="jxr_linenumber" name="L189" href="#L189">189</a>             wb.attr(<span class="jxr_string">"autoHideDialCode"</span>, inputPhone.isAutoHideDialCode());
-<a class="jxr_linenumber" name="L190" href="#L190">190</a>         }
-<a class="jxr_linenumber" name="L191" href="#L191">191</a>         <strong class="jxr_keyword">if</strong> (inputPhone.getAutoPlaceholderEnum() != InputPhone.AutoPlaceholder.polite) {
-<a class="jxr_linenumber" name="L192" href="#L192">192</a>             wb.attr(<span class="jxr_string">"autoPlaceholder"</span>, inputPhone.getAutoPlaceholder());
-<a class="jxr_linenumber" name="L193" href="#L193">193</a>         }
-<a class="jxr_linenumber" name="L194" href="#L194">194</a>         encodeCountries(wb, <span class="jxr_string">"excludeCountries"</span>, inputPhone.getExcludeCountries());
-<a class="jxr_linenumber" name="L195" href="#L195">195</a>         <strong class="jxr_keyword">if</strong> (!inputPhone.isFormatOnDisplay()) {
-<a class="jxr_linenumber" name="L196" href="#L196">196</a>             wb.attr(<span class="jxr_string">"formatOnDisplay"</span>, inputPhone.isFormatOnDisplay());
-<a class="jxr_linenumber" name="L197" href="#L197">197</a>         }
-<a class="jxr_linenumber" name="L198" href="#L198">198</a>         <strong class="jxr_keyword">if</strong> (StringUtils.isNotEmpty(inputPhone.getInitialCountry())) {
-<a class="jxr_linenumber" name="L199" href="#L199">199</a>             wb.attr(<span class="jxr_string">"initialCountry"</span>, inputPhone.getInitialCountry());
-<a class="jxr_linenumber" name="L200" href="#L200">200</a>         }
-<a class="jxr_linenumber" name="L201" href="#L201">201</a>         <strong class="jxr_keyword">if</strong> (InputPhone.COUNTRY_AUTO.equals(inputPhone.getInitialCountry())) {
-<a class="jxr_linenumber" name="L202" href="#L202">202</a>             <strong class="jxr_keyword">if</strong> (inputPhone.getGeoIpLookup() == <strong class="jxr_keyword">null</strong>) {
-<a class="jxr_linenumber" name="L203" href="#L203">203</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> FacesException(<span class="jxr_string">"InputPhone geoIpLookup property is required when initialCountry is 'auto'."</span>);
-<a class="jxr_linenumber" name="L204" href="#L204">204</a>             }
-<a class="jxr_linenumber" name="L205" href="#L205">205</a>             wb.nativeAttr(<span class="jxr_string">"geoIpLookup"</span>, inputPhone.getGeoIpLookup());
-<a class="jxr_linenumber" name="L206" href="#L206">206</a>         }
-<a class="jxr_linenumber" name="L207" href="#L207">207</a>         <strong class="jxr_keyword">if</strong> (!inputPhone.isNationalMode()) {
-<a class="jxr_linenumber" name="L208" href="#L208">208</a>             wb.attr(<span class="jxr_string">"nationalMode"</span>, inputPhone.isNationalMode());
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>     <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> encodeScript(<strong class="jxr_keyword">final</strong> FacesContext context, <strong class="jxr_keyword">final</strong> <a name="InputPhone" href="../../../../../org/primefaces/extensions/component/inputphone/InputPhone.html#InputPhone">InputPhone</a> inputPhone) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         <strong class="jxr_keyword">final</strong> WidgetBuilder wb = getWidgetBuilder(context);
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>         wb.init(<span class="jxr_string">"ExtInputPhone"</span>, inputPhone);
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>         encodeCountries(wb, <span class="jxr_string">"excludeCountries"</span>, inputPhone.getExcludeCountries());
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>         wb.attr(<span class="jxr_string">"allowDropdown"</span>, inputPhone.isAllowDropdown(), <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>         wb.attr(<span class="jxr_string">"autoHideDialCode"</span>, inputPhone.isAutoHideDialCode(), <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>         wb.attr(<span class="jxr_string">"fixDropdownWidth"</span>, inputPhone.isFixDropdownWidth(), <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>         wb.attr(<span class="jxr_string">"formatOnDisplay"</span>, inputPhone.isFormatOnDisplay(), <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>         wb.attr(<span class="jxr_string">"formatAsYouType"</span>, inputPhone.isFormatAsYouType(), <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>         wb.attr(<span class="jxr_string">"nationalMode"</span>, inputPhone.isNationalMode(), <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>         wb.attr(<span class="jxr_string">"separateDialCode"</span>, inputPhone.isSeparateDialCode(), false);
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>         <strong class="jxr_keyword">if</strong> (inputPhone.getAutoPlaceholderEnum() != InputPhone.AutoPlaceholder.polite) {
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>             wb.attr(<span class="jxr_string">"autoPlaceholder"</span>, inputPhone.getAutoPlaceholder());
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>         }
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>         <strong class="jxr_keyword">if</strong> (LangUtils.isNotBlank(inputPhone.getInitialCountry())) {
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>             wb.attr(<span class="jxr_string">"initialCountry"</span>, inputPhone.getInitialCountry());
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>         }
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>         <strong class="jxr_keyword">if</strong> (InputPhone.COUNTRY_AUTO.equals(inputPhone.getInitialCountry())) {
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>             <strong class="jxr_keyword">if</strong> (inputPhone.getGeoIpLookup() == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> FacesException(<span class="jxr_string">"InputPhone geoIpLookup property is required when initialCountry is 'auto'."</span>);
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>             }
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>             wb.nativeAttr(<span class="jxr_string">"geoIpLookup"</span>, inputPhone.getGeoIpLookup());
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>         }
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>         encodeCountries(wb, <span class="jxr_string">"onlyCountries"</span>, inputPhone.getOnlyCountries());
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>         <strong class="jxr_keyword">if</strong> (inputPhone.getPlaceholderNumberTypeEnum() != InputPhone.PlaceholderNumberType.mobile) {
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>             wb.attr(<span class="jxr_string">"placeholderNumberType"</span>, inputPhone.getPlaceholderNumberType().toUpperCase());
 <a class="jxr_linenumber" name="L209" href="#L209">209</a>         }
-<a class="jxr_linenumber" name="L210" href="#L210">210</a>         encodeCountries(wb, <span class="jxr_string">"onlyCountries"</span>, inputPhone.getOnlyCountries());
-<a class="jxr_linenumber" name="L211" href="#L211">211</a>         <strong class="jxr_keyword">if</strong> (inputPhone.getPlaceholderNumberTypeEnum() != InputPhone.PlaceholderNumberType.mobile) {
-<a class="jxr_linenumber" name="L212" href="#L212">212</a>             wb.attr(<span class="jxr_string">"placeholderNumberType"</span>, inputPhone.getPlaceholderNumberType().toUpperCase());
-<a class="jxr_linenumber" name="L213" href="#L213">213</a>         }
-<a class="jxr_linenumber" name="L214" href="#L214">214</a>         encodeCountries(wb, <span class="jxr_string">"preferredCountries"</span>, inputPhone.getPreferredCountries());
-<a class="jxr_linenumber" name="L215" href="#L215">215</a>         <strong class="jxr_keyword">if</strong> (inputPhone.isSeparateDialCode()) {
-<a class="jxr_linenumber" name="L216" href="#L216">216</a>             wb.attr(<span class="jxr_string">"separateDialCode"</span>, inputPhone.isSeparateDialCode());
-<a class="jxr_linenumber" name="L217" href="#L217">217</a>         }
-<a class="jxr_linenumber" name="L218" href="#L218">218</a>         <strong class="jxr_keyword">if</strong> (inputPhone.isUtilsScriptRequired()) {
-<a class="jxr_linenumber" name="L219" href="#L219">219</a>             wb.attr(<span class="jxr_string">"utilsScript"</span>,
-<a class="jxr_linenumber" name="L220" href="#L220">220</a>                         context.getApplication()
-<a class="jxr_linenumber" name="L221" href="#L221">221</a>                                     .getResourceHandler()
-<a class="jxr_linenumber" name="L222" href="#L222">222</a>                                     .createResource(<span class="jxr_string">"inputphone/utils.js"</span>, <span class="jxr_string">"primefaces-extensions"</span>)
-<a class="jxr_linenumber" name="L223" href="#L223">223</a>                                     .getRequestPath());
-<a class="jxr_linenumber" name="L224" href="#L224">224</a>         }
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>         encodeCountries(wb, <span class="jxr_string">"countryOrder"</span>, inputPhone.getPreferredCountries());
+<a class="jxr_linenumber" name="L211" href="#L211">211</a> 
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>         wb.attr(<span class="jxr_string">"utilsScript"</span>,
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>                     context.getApplication()
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>                                 .getResourceHandler()
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>                                 .createResource(<span class="jxr_string">"inputphone/utils.js"</span>, org.primefaces.extensions.util.Constants.LIBRARY)
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>                                 .getRequestPath());
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>         <strong class="jxr_keyword">if</strong> (inputPhone.getLocalizedCountries() != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>             wb.nativeAttr(<span class="jxr_string">"i18n"</span>, objectToJsonString(inputPhone.getLocalizedCountries()));
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>         }
+<a class="jxr_linenumber" name="L220" href="#L220">220</a> 
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>         encodeClientBehaviors(context, inputPhone);
+<a class="jxr_linenumber" name="L222" href="#L222">222</a> 
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>         wb.finish();
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>     }
 <a class="jxr_linenumber" name="L225" href="#L225">225</a> 
-<a class="jxr_linenumber" name="L226" href="#L226">226</a>         encodeClientBehaviors(context, inputPhone);
-<a class="jxr_linenumber" name="L227" href="#L227">227</a> 
-<a class="jxr_linenumber" name="L228" href="#L228">228</a>         wb.finish();
-<a class="jxr_linenumber" name="L229" href="#L229">229</a>     }
-<a class="jxr_linenumber" name="L230" href="#L230">230</a> 
-<a class="jxr_linenumber" name="L231" href="#L231">231</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> encodeCountries(WidgetBuilder wb, String attribute, Object value) <strong class="jxr_keyword">throws</strong> IOException {
-<a class="jxr_linenumber" name="L232" href="#L232">232</a>         <strong class="jxr_keyword">final</strong> Collection&lt;String&gt; countries = toCollection(value);
-<a class="jxr_linenumber" name="L233" href="#L233">233</a>         <strong class="jxr_keyword">if</strong> (countries != <strong class="jxr_keyword">null</strong> &amp;&amp; !countries.isEmpty()) {
-<a class="jxr_linenumber" name="L234" href="#L234">234</a>             wb.nativeAttr(attribute, <strong class="jxr_keyword">new</strong> JSONArray(countries).toString());
-<a class="jxr_linenumber" name="L235" href="#L235">235</a>         }
-<a class="jxr_linenumber" name="L236" href="#L236">236</a>     }
-<a class="jxr_linenumber" name="L237" href="#L237">237</a> 
-<a class="jxr_linenumber" name="L238" href="#L238">238</a>     <strong class="jxr_keyword">private</strong> Collection&lt;String&gt; toCollection(Object object) {
-<a class="jxr_linenumber" name="L239" href="#L239">239</a>         <strong class="jxr_keyword">if</strong> (String.<strong class="jxr_keyword">class</strong>.isInstance(object)) {
-<a class="jxr_linenumber" name="L240" href="#L240">240</a>             <strong class="jxr_keyword">final</strong> String string = ((String) object).replaceAll(<span class="jxr_string">" "</span>, <span class="jxr_string">","</span>).toLowerCase();
-<a class="jxr_linenumber" name="L241" href="#L241">241</a>             <strong class="jxr_keyword">return</strong> Arrays.asList(string.split(<span class="jxr_string">","</span>));
-<a class="jxr_linenumber" name="L242" href="#L242">242</a>         }
-<a class="jxr_linenumber" name="L243" href="#L243">243</a>         <strong class="jxr_keyword">return</strong> (Collection&lt;String&gt;) object;
-<a class="jxr_linenumber" name="L244" href="#L244">244</a>     }
-<a class="jxr_linenumber" name="L245" href="#L245">245</a> 
-<a class="jxr_linenumber" name="L246" href="#L246">246</a> }
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> encodeCountries(<strong class="jxr_keyword">final</strong> WidgetBuilder wb, <strong class="jxr_keyword">final</strong> String attribute, <strong class="jxr_keyword">final</strong> Object value)
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>                 <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>         <strong class="jxr_keyword">final</strong> Collection&lt;String&gt; countries = toCollection(value);
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>         <strong class="jxr_keyword">if</strong> (!countries.isEmpty()) {
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>             wb.nativeAttr(attribute, <strong class="jxr_keyword">new</strong> JSONArray(countries).toString());
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>         }
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>     }
+<a class="jxr_linenumber" name="L233" href="#L233">233</a> 
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>     @SuppressWarnings(<span class="jxr_string">"unchecked"</span>)
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>     <strong class="jxr_keyword">private</strong> Collection&lt;String&gt; toCollection(<strong class="jxr_keyword">final</strong> Object object) {
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>         <strong class="jxr_keyword">if</strong> (object instanceof String) {
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>             <strong class="jxr_keyword">final</strong> String string = ((String) object).replace(' ', ',').toLowerCase();
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>             <strong class="jxr_keyword">return</strong> Arrays.asList(string.split(<span class="jxr_string">","</span>));
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>         }
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>         <strong class="jxr_keyword">return</strong> (Collection&lt;String&gt;) object;
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>     }
+<a class="jxr_linenumber" name="L242" href="#L242">242</a> 
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>     @SuppressWarnings(<span class="jxr_string">"unchecked"</span>)
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>     <strong class="jxr_keyword">private</strong> String objectToJsonString(<strong class="jxr_keyword">final</strong> Object object) {
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>         <strong class="jxr_keyword">if</strong> (object == <strong class="jxr_keyword">null</strong> || object instanceof String) {
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>             <strong class="jxr_keyword">return</strong> (String) object;
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>         }
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>         Map&lt;String, String&gt; map = (Map&lt;String, String&gt;) object;
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>         JSONObject jsonObj = <strong class="jxr_keyword">new</strong> JSONObject();
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>         map.forEach(jsonObj::put);
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>         <strong class="jxr_keyword">return</strong> jsonObj.toString();
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>     }
+<a class="jxr_linenumber" name="L253" href="#L253">253</a> 
+<a class="jxr_linenumber" name="L254" href="#L254">254</a> }
 </pre>
 <hr/>
-<div id="footer">Copyright &#169; 2011&#x2013;2020. All rights reserved.</div>
+<div id="footer">© 2011–2024</div>
 </body>
 </html>
