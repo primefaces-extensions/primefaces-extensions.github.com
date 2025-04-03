@@ -13,31 +13,30 @@ This is an overview page, please visit [primefaces-extensions.github.io](http://
 [![PrimeFaces Extensions Logo](http://primefaces-extensions.github.io/reports/images/title.png)](https://www.primefaces.org/showcase-ext/)
 
 
-### Getting Started
-***
+## Getting Started
+
 Please refer to the [Getting Started Guide](https://github.com/primefaces-extensions/primefaces-extensions.github.com/wiki/Getting-Started) to see what you need to get started and any optional libraries.
 
-### Showcase
-***
+## Showcase
+
 A showcase of component usage can be found [here](https://www.primefaces.org/showcase-ext/views/home.jsf)
 
-### VDL Tag Libary Docs
-***
+## VDL Tag Libary Docs
+
 Please refer to the [VDL Docs](http://primefaces-extensions.github.io/vdldoc/) to examine the latest tag library details.
 
 
-### Issues
-***
+## Issues
+
 Please report all issues [here](https://github.com/primefaces-extensions/primefaces-extensions/issues).
 
-### License
-***
+## License
+
 Licensed under the [MIT](https://en.wikipedia.org/wiki/MIT_License) license.
 
 `SPDX-License-Identifier: MIT`
 
-### Acknowledgements
-***
-We would like to thank JetBrains for providing us with an open source license to the IntelliJ IDEA - the best Java and polyglot IDE.
 
-![IntelliJ IDEA logo](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA.png)
+## Powered by
+
+[![IntelliJ IDEA logo.](https://resources.jetbrains.com/storage/products/company/brand/logos/IntelliJ_IDEA.svg)](https://jb.gg/OpenSourceSupport)
