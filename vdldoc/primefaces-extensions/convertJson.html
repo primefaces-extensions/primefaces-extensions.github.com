@@ -64,9 +64,7 @@
                         <dl>
                             <dt>Description:</dt>
                             <dd>
-                                <div class="block">
-                                    <i>No Description</i>
-                                </div>
+                                <div class="block">Converter to convert JSON.</div>
                             </dd>
                         </dl>
                     </li>
@@ -106,7 +104,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <td class="colOne" colspan="4"><i>No Attributes Defined.</i></td>
+                        <tr id="type" class="rowColor">
+                            <td class="colFirst"><a href="#type"><code>type</code></a></td><td class="colOne"><code>false</code></td><td class="colOne"><code>jakarta.el.ValueExpression</code>
+                                <br>
+                                (<i>must evaluate to </i><code>java.lang.String</code>)
+                    </td><td class="colLast">Data type of the value object (optional). Any primitive type, array, non-generic or generic type is supported. Data type is sometimes required to convert a value to a JSON representation. All data types should be fully qualified. Default is null.</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
